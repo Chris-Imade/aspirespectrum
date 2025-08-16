@@ -474,40 +474,42 @@
           </div>
         </div>
         <div class="col-lg-7 mb-30">
-          <form action="mail.php" method="post" class="form-style2 ajax-contact wow animate__fadeInUp"
-            data-wow-delay="0.95s">
+          <form id="contactForm" class="form-style2 wow animate__fadeInUp" data-wow-delay="0.95s">
             <div class="row gx-20">
               <!-- First Name -->
               <div class="col-md-6 form-group">
-                <input class="form-control" type="text" name="fname" id="fname" placeholder="Your Name *" />
+                <input class="form-control" type="text" name="fname" id="fname" placeholder="Your Name *" required />
               </div>
               <!-- Last Name -->
               <div class="col-md-6 form-group">
-                <input class="form-control" type="text" name="lname" id="lname" placeholder="Last Name *" />
+                <input class="form-control" type="text" name="lname" id="lname" placeholder="Last Name *" required />
               </div>
               <!-- Email Address -->
               <div class="col-md-6 form-group">
-                <input class="form-control" type="email" name="email" id="email" placeholder="Email Address *" />
+                <input class="form-control" type="email" name="email" id="email" placeholder="Email Address *"
+                  required />
               </div>
               <!-- Phone Number -->
               <div class="col-md-6 form-group">
-                <input class="form-control" type="tel" name="phone" id="phone" placeholder="Phone *" />
+                <input class="form-control" type="tel" name="phone" id="phone" placeholder="Phone *" required />
               </div>
               <!-- Message -->
               <div class="col-12 form-group">
-                <textarea class="form-control" name="message" id="message" placeholder="Type Your Message *"
-                  rows="5"></textarea>
+                <textarea class="form-control" name="message" id="message" placeholder="Type Your Message *" rows="5"
+                  required></textarea>
               </div>
               <!-- Submit Button -->
               <div class="col-12">
-                <button class="vs-btn">
+                <button type="submit" class="vs-btn">
                   <span class="vs-btn__border"></span>Send Message
                 </button>
               </div>
             </div>
-            <!-- Form Messages -->
           </form>
-          <p class="form-messages mb-0 mt-3"></p>
+          <div id="form-messages" class="form-messages mb-0 mt-3"></div>
+          <div id="spinner" class="spinner-border text-primary" role="status" style="display: none;">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </div>
     </div>
@@ -684,6 +686,59 @@
   <script src="assets/js/swiper-bundle.js"></script>
   <!-- Main Js File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const formData = new FormData(form);
+      const formMessages = document.getElementById('form-messages');
+      const spinner = document.getElementById('spinner');
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      // Show spinner and disable button
+      spinner.style.display = 'block';
+      submitButton.disabled = true;
+      formMessages.innerHTML = '';
+
+      // The backend expects firstName and lastName, so we map fname and lname from the form.
+      const contactData = {
+        firstName: formData.get('fname'),
+        lastName: formData.get('lname'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        message: formData.get('message'),
+      };
+
+      const url = 'https://aspirespectrum-server.onrender.com/contact';
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(contactData),
+        });
+
+        if (response.ok) {
+          form.reset();
+          formMessages.innerHTML = '<div class="alert alert-success">Thank you! Your message has been sent.</div>';
+        } else {
+          const errorText = await response.text();
+          formMessages.innerHTML = `<div class="alert alert-danger">Error: ${errorText}</div>`;
+        }
+      } catch (error) {
+        console.error('Fetch error:', error);
+        formMessages.innerHTML = '<div class="alert alert-danger">A network error occurred. Please try again later.</div>';
+      } finally {
+        // Hide spinner and enable button
+        spinner.style.display = 'none';
+        submitButton.disabled = false;
+      }
+    });
+  </script>
 </body>
 
 </html>
