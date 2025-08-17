@@ -61,6 +61,77 @@
       max-width: 230px;
       height: auto;
     }
+    /* Service image sizing: ensure images fill their parent */
+    .vs-service__image--link {
+      display: block;
+      width: 100%;
+      height: 284px; /* matches card figure height */
+    }
+    .vs-service__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Our Locations cards */
+    .location-grid { margin-top: 20px; }
+    .location-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      padding: 18px;
+      height: 100%;
+      color: #fff;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      backdrop-filter: blur(6px);
+    }
+    .location-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+      background: rgba(255, 255, 255, 0.16);
+    }
+    .location-card__header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .location-card__icon { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,.18); border: 1px dashed rgba(255,255,255,.4); }
+    .location-card__icon i { color: #fff; }
+    .location-card__title { margin: 0; font-size: 1.1rem; }
+    .location-card__chips { margin-top: 6px; }
+    .location-chip { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); color: #fff; font-size: .85rem; margin: 6px 6px 0 0; white-space: nowrap; }
+    @media (max-width: 575.98px) {
+      .location-card { padding: 16px; }
+      .location-card__title { font-size: 1rem; }
+      .location-chip { font-size: .8rem; }
+    }
+    /* What We Offer - modern cards */
+    .offer-section { background: linear-gradient(180deg, #f9fafb 0%, #f4f6f8 100%); padding: 70px 0; }
+    .offer-card { background: #fff; border-radius: 16px; box-shadow: 0 6px 18px rgba(16,24,40,.08); overflow: hidden; height: 100%; transition: transform .25s ease, box-shadow .25s ease; }
+    .offer-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(16,24,40,.12); }
+    .offer-card__media { position: relative; aspect-ratio: 16/10; background: #eef2f7; }
+    .offer-card__image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .offer-card__icon { position: absolute; left: 14px; top: 14px; width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.9); display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(2, 6, 23, .08); box-shadow: 0 2px 10px rgba(16,24,40,.08); }
+    .offer-card__body { padding: 18px 18px 20px; }
+    .offer-card__title { font-size: 1.05rem; margin: 0 0 10px; color: #0f172a; }
+    .offer-card__cta { display: inline-flex; align-items: center; gap: 6px; color: #2563eb; text-decoration: none; font-weight: 600; }
+    .offer-card__cta svg { transition: transform .2s ease; }
+    .offer-card__cta:hover svg { transform: translateX(4px); }
+    /* Blog carousel: Flex fallback when Swiper isn't initialized */
+    .row.vs-carousel.swiper:not(.swiper-initialized) { margin-left: 0; margin-right: 0; }
+    .vs-carousel.swiper:not(.swiper-initialized) .swiper-wrapper {
+      display: flex;
+      gap: 24px;
+    }
+    .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide {
+      flex: 0 0 calc((100% - 48px) / 3);
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      box-sizing: border-box;
+    }
+    @media (max-width: 991.98px) {
+      .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide { flex-basis: calc((100% - 24px) / 2); }
+    }
+    @media (max-width: 575.98px) {
+      .vs-carousel.swiper:not(.swiper-initialized) .swiper-wrapper { gap: 16px; }
+      .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide { flex-basis: 100%; }
+    }
   </style>
 </head>
 
@@ -146,7 +217,7 @@
             </a>
           </li>
           <li class="">
-            <a class="vs-svg-assets" target="_blank" href="https://www.ausomebee.com/blog/">
+            <a class="vs-svg-assets" target="_blank" href="blog.html">
               Resources
               <svg xmlns="http://www.w3.org/2000/svg" width="87" height="31" viewBox="0 0 87 31" fill="none">
                 <path
@@ -361,7 +432,7 @@
                     </a>
                   </li>
                   <li class="">
-                    <a class="vs-svg-assets" target="_blank" href="https://www.ausomebee.com/blog/">
+                    <a class="vs-svg-assets" href="blog.html">
                       Resources
                       <svg xmlns="http://www.w3.org/2000/svg" width="87" height="31" viewBox="0 0 87 31" fill="none">
                         <path
@@ -431,7 +502,6 @@
                 <div class="vs-hero__shape" style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
                   <div class="vs-hero__shape--bg vs-hero__anim" style="display:none;"></div>
                   <span class="vs-hero__title--sub vs-hero__anim">
-                    <img src="assets/img/icons/hero-star-icon.svg" alt="hero star icon" />
                     Evidence-Based Care!
                   </span>
                   <h1 class="vs-hero__title--main vs-hero__anim">
@@ -455,7 +525,6 @@
                 <div class="vs-hero__shape" style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
                   <div class="vs-hero__shape--bg vs-hero__anim" style="display:none;"></div>
                   <span class="vs-hero__title--sub vs-hero__anim">
-                    <img src="assets/img/icons/hero-star-icon.svg" alt="hero star icon" />
                     Building Brighter Futures
                   </span>
                   <h1 class="vs-hero__title--main vs-hero__anim">
@@ -485,7 +554,7 @@
     </section>
     <!-- Hero End -->
     <!-- Vs Service Area -->
-    <section class="vs-service--area animation-active z-index-common space overflow-hidden"
+    <!-- <section class="vs-service--area animation-active z-index-common space overflow-hidden"
       data-bg-src="assets/img/service/service-bg.png">
       <img src="assets/img/elements/service-ele-1.svg" alt="elements1" class="vs-service--ele1 wow animate__fadeInLeft"
         data-wow-delay="0.25s" />
@@ -513,7 +582,7 @@
                 <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.25s">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/service/s-1-1.jpg" alt="vs service image" />
+                      <img class="vs-service__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="vs service image" />
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -523,7 +592,7 @@
                       </span>
                     </div>
                     <a class="vs-service__heading--link" href="services.html">
-                      <h3 class="vs-service__heading">Learn and Play</h3>
+                      <h3 class="vs-service__heading">Behavior Intervention</h3>
                     </a>
                     <a href="services.html" class="vs-service__link">
                       <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -539,7 +608,7 @@
                 <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.35s">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/service/s-1-2.jpg" alt="vs service image" />
+                      <img class="vs-service__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg" alt="vs service image" />
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -549,33 +618,7 @@
                       </span>
                     </div>
                     <a class="vs-service__heading--link" href="services.html">
-                      <h3 class="vs-service__heading">Online Class</h3>
-                    </a>
-                    <a href="services.html" class="vs-service__link">
-                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M1.39045 17.9495L17.6245 3.81022L11.9467 3.41092C11.6162 3.39253 11.307 3.24133 11.0897 2.99157C10.3795 2.16137 11.0268 0.887081 12.116 0.97149L20.7679 1.567C21.4447 1.61318 21.9555 2.20013 21.9077 2.87686L21.3019 11.5281C21.2154 13.1944 18.7024 13.0128 18.8562 11.3514L19.2524 5.64459L3.0003 19.7995C2.48691 20.2625 1.69228 20.2096 1.24372 19.6835C0.800172 19.1667 0.86807 18.3864 1.39045 17.9495Z"
-                          fill="currentColor" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-å4 col-md-6 swiper-slide">
-                <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.45s">
-                  <div class="vs-service__figure">
-                    <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/service/s-1-3.jpg" alt="vs service image" />
-                    </a>
-                  </div>
-                  <div class="vs-service__content">
-                    <div class="vs-service__header">
-                      <span class="vs-service__icon">
-                        <img src="assets/img/icons/service-icon-1-3.svg" alt="service icon" />
-                      </span>
-                    </div>
-                    <a class="vs-service__heading--link" href="services.html">
-                      <h3 class="vs-service__heading">Formal Tuition</h3>
+                      <h3 class="vs-service__heading">Data Collection &amp; Analysis</h3>
                     </a>
                     <a href="services.html" class="vs-service__link">
                       <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -588,10 +631,10 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 swiper-slide">
-                <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.55s">
+                <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.45s">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/service/s-1-4.jpg" alt="vs service image" />
+                      <img class="vs-service__image" src="assets/img/custom/pexels-alex-green-5692640.jpg" alt="vs service image" />
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -601,7 +644,7 @@
                       </span>
                     </div>
                     <a class="vs-service__heading--link" href="services.html">
-                      <h3 class="vs-service__heading">Formal Tuition</h3>
+                      <h3 class="vs-service__heading">Assessment &amp; Observation</h3>
                     </a>
                     <a href="services.html" class="vs-service__link">
                       <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -655,116 +698,104 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Vs Service Area End -->
     <!-- What We Offer -->
-    <section class="vs-session--area space space-extra-bottom bg-theme-color-1 z-index-common overflow-hidden">
-      <div class="vs-session--bg-image" data-vs-gsap-parallax-speed="5" data-vs-gsap-parallax-zoom>
-        <img src="assets/img/session/session-bg.png" alt="session bg" />
-      </div>
-      <div class="vs-session--ele1" data-vs-gsap-parallax-speed="2" data-vs-gsap-parallax-zoom>
-        <img src="assets/img/session/session-ele-1.png" alt="session ele" />
-      </div>
-      <div class="vs-session--ele2" data-vs-gsap-parallax-speed="5" data-vs-gsap-parallax-zoom>
-        <img src="assets/img/session/session-ele-2.png" alt="session ele" />
-      </div>
+    <section class="offer-section">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-7 wow animate__fadeInUp" data-wow-delay="0.15s">
-            <div class="vs-title text-center title-anime animation-style2">
-              <div class="title-anime__wrap">
-                <span class="vs-title__sub text-white" style="scale: 1.5;">What We Offer</span>
-                <h2 class="vs-title__main text-white px-xl-5">
-                </h2>
+        <div class="vs-title text-center title-anime animation-style2 mb-4">
+          <div class="title-anime__wrap">
+            <span class="vs-title__sub">What We Offer</span>
+            <h2 class="vs-title__main">ABA Therapy Services</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.1s">
+              <div class="offer-card__media">
+                <img class="offer-card__image" src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg" alt="Data Collection &amp; Analysis" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22" height="22"></span>
+              </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Data Collection &amp; Analysis</h3>
+                <a class="offer-card__cta" href="services.html">Learn more
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-lg-10">
-            <div class="row gx-30">
-              <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.2s">
-                <div class="vs-session">
-                  <img class="vs-session__bg" src="assets/img/elements/session-main-block.png" alt="" />
-                  <div class="vs-session__content">
-                    <h3 class="vs-session__title">Digital Learning Environment</h3>
-                    <p class="vs-session__time" style="font-size: 16px;">Personalized, self-paced digital training on
-                      mobile devices for children with autism to build social, communication, and life skills.</p>
-                  </div>
-                  <span class="vs-session__icon">
-                    <i class="fa-solid fa-laptop-code" style="font-size: 2rem; color: white;"></i>
-                  </span>
-                </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.2s">
+              <div class="offer-card__media">
+                <img class="offer-card__image" src="assets/img/custom/pexels-alex-green-5692640.jpg" alt="Assessment &amp; Observation" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22" height="22"></span>
               </div>
-              <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.3s">
-                <div class="vs-session">
-                  <img class="vs-session__bg" src="assets/img/elements/session-main-block.png" alt="" />
-                  <div class="vs-session__content">
-                    <h3 class="vs-session__title">Special Learning</h3>
-                    <p class="vs-session__time" style="font-size: 16px;">Develop real-life skills with our vast library
-                      of social stories, digital avatars, and specialized training modules.</p>
-                  </div>
-                  <span class="vs-session__icon">
-                    <i class="fa-solid fa-book-open-reader" style="font-size: 2rem; color: white;"></i>
-                  </span>
-                </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Assessment &amp; Observation</h3>
+                <a class="offer-card__cta" href="services.html">Learn more
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
               </div>
-              <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.4s">
-                <div class="vs-session">
-                  <img class="vs-session__bg" src="assets/img/elements/session-main-block.png" alt="" />
-                  <div class="vs-session__content">
-                    <h3 class="vs-session__title">Applied Behavior Analysis</h3>
-                    <p class="vs-session__time" style="font-size: 16px;">Our platform uses ABA principles to create a
-                      personalized, interactive environment for therapy and skill development.</p>
-                  </div>
-                  <span class="vs-session__icon">
-                    <i class="fa-solid fa-chart-pie" style="font-size: 2rem; color: white;"></i>
-                  </span>
-                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.3s">
+              <div class="offer-card__media">
+                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8613094.jpg" alt="Behavior Intervention Plan" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22" height="22"></span>
               </div>
-              <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.5s">
-                <div class="vs-session">
-                  <img class="vs-session__bg" src="assets/img/elements/session-main-block.png" alt="" />
-                  <div class="vs-session__content">
-                    <h3 class="vs-session__title">Innovative Technology</h3>
-                    <p class="vs-session__time" style="font-size: 16px;">We leverage AI and Machine Learning for
-                      adaptive, self-paced learning and precise performance tracking.</p>
-                  </div>
-                  <span class="vs-session__icon">
-                    <i class="fa-solid fa-microchip" style="font-size: 2rem; color: white;"></i>
-                  </span>
-                </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Behavior Intervention Plan</h3>
+                <a class="offer-card__cta" href="services.html">Learn more
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
               </div>
-              <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.6s">
-                <div class="vs-session">
-                  <img class="vs-session__bg" src="assets/img/elements/session-main-block.png" alt="" />
-                  <div class="vs-session__content">
-                    <h3 class="vs-session__title">Community Connect</h3>
-                    <p class="vs-session__time" style="font-size: 16px;">Our community connects families with resources
-                      and support through forums, blogs, and local events.</p>
-                  </div>
-                  <span class="vs-session__icon">
-                    <i class="fa-solid fa-users" style="font-size: 2rem; color: white;"></i>
-                  </span>
-                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.4s">
+              <div class="offer-card__media">
+                <img class="offer-card__image" src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg" alt="Parent Training &amp; Support" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22" height="22"></span>
               </div>
-              <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.7s">
-                <div class="vs-session">
-                  <img class="vs-session__bg" src="assets/img/elements/session-main-block.png" alt="" />
-                  <div class="vs-session__content">
-                    <h3 class="vs-session__title">Dedicated Therapist Team</h3>
-                    <p class="vs-session__time" style="font-size: 16px;">Access dedicated therapists and high-quality
-                      ABA training videos through our supportive online community.</p>
-                  </div>
-                  <span class="vs-session__icon">
-                    <i class="fa-solid fa-user-doctor" style="font-size: 2rem; color: white;"></i>
-                  </span>
-                </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Parent Training &amp; Support</h3>
+                <a class="offer-card__cta" href="services.html">Learn more
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.5s">
+              <div class="offer-card__media">
+                <img class="offer-card__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="Skill Acquisition Programs" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22" height="22"></span>
+              </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Skill Acquisition Programs</h3>
+                <a class="offer-card__cta" href="services.html">Learn more
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.6s">
+              <div class="offer-card__media">
+                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8612971.jpg" alt="Therapist-Led Sessions" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22" height="22"></span>
+              </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Therapist-Led Sessions</h3>
+                <a class="offer-card__cta" href="services.html">Learn more
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="vs-balls vs-balls--screen" data-balls-top="-6px" data-balls-color="#F8F8F8"></div>
-      <div class="vs-balls vs-balls--screen" data-balls-bottm="-6px" data-balls-color="#F8F8F8"></div>
     </section>
     <!-- Vs Session Time Area End -->
 
@@ -783,29 +814,113 @@
       <div class="vs-pro--ele3"></div>
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-8 text-center">
-            <div class="vs-title title-anime animation-style2">
+          <div class="col-12">
+            <div class="vs-title text-center title-anime animation-style2">
               <div class="title-anime__wrap">
                 <span class="vs-title__sub text-white">OUR LOCATIONS</span>
                 <h2 class="vs-title__main text-white">Where We Serve</h2>
               </div>
-              <p class="text-white fw-bold vs-text-bolder mb-4">
-                We currently serve cities and towns in these 6 counties of the Central Valley area of Northern
-                California:
-              </p>
-              <p class="text-white">
-                <strong>Merced:</strong> Atwater, Livingston, Los Banos, Gustine, and Dos Palos<br>
-                <strong>Tulare:</strong> Tulare, Visalia, Exeter, Porterville, Dinuba and Lindsay<br>
-                <strong>Kings:</strong> Armona, Avenal, Corcoran, Hanford, Kettleman City, Lemoore and Stratford<br>
-                <strong>Madera:</strong> Madera, Chowchilla, Oakhurst, Coarsegold, and North Fork<br>
-                <strong>Mariposa:</strong> Mariposa, Coulterville, Wawona, Midpines, Yosemite Valley and Catheys
-                Valley<br>
-                <strong>Fresno:</strong> Auberry, Big Creek, Biola, Burrel, Cantua Creek, Caruthers, Clovis, and
-                Coalinga
-              </p>
-              <p class="text-white fw-bold vs-text-bolder mt-4">
-                We continue to expand our reach to new cities to get our services closer to you!
-              </p>
+              <p class="text-white mb-1">We currently serve cities and towns in these counties of California's Central Valley.</p>
+              <p class="text-white fw-bold vs-text-bolder">We're growing and adding new cities regularly.</p>
+            </div>
+            <div class="row location-grid">
+              <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="location-card">
+                  <div class="location-card__header">
+                    <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <h4 class="location-card__title">Merced County</h4>
+                  </div>
+                  <div class="location-card__chips">
+                    <span class="location-chip">Atwater</span>
+                    <span class="location-chip">Livingston</span>
+                    <span class="location-chip">Los Banos</span>
+                    <span class="location-chip">Gustine</span>
+                    <span class="location-chip">Dos Palos</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="location-card">
+                  <div class="location-card__header">
+                    <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <h4 class="location-card__title">Tulare County</h4>
+                  </div>
+                  <div class="location-card__chips">
+                    <span class="location-chip">Tulare</span>
+                    <span class="location-chip">Visalia</span>
+                    <span class="location-chip">Exeter</span>
+                    <span class="location-chip">Porterville</span>
+                    <span class="location-chip">Dinuba</span>
+                    <span class="location-chip">Lindsay</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="location-card">
+                  <div class="location-card__header">
+                    <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <h4 class="location-card__title">Kings County</h4>
+                  </div>
+                  <div class="location-card__chips">
+                    <span class="location-chip">Armona</span>
+                    <span class="location-chip">Avenal</span>
+                    <span class="location-chip">Corcoran</span>
+                    <span class="location-chip">Hanford</span>
+                    <span class="location-chip">Kettleman City</span>
+                    <span class="location-chip">Lemoore</span>
+                    <span class="location-chip">Stratford</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="location-card">
+                  <div class="location-card__header">
+                    <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <h4 class="location-card__title">Madera County</h4>
+                  </div>
+                  <div class="location-card__chips">
+                    <span class="location-chip">Madera</span>
+                    <span class="location-chip">Chowchilla</span>
+                    <span class="location-chip">Oakhurst</span>
+                    <span class="location-chip">Coarsegold</span>
+                    <span class="location-chip">North Fork</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="location-card">
+                  <div class="location-card__header">
+                    <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <h4 class="location-card__title">Mariposa County</h4>
+                  </div>
+                  <div class="location-card__chips">
+                    <span class="location-chip">Mariposa</span>
+                    <span class="location-chip">Coulterville</span>
+                    <span class="location-chip">Wawona</span>
+                    <span class="location-chip">Midpines</span>
+                    <span class="location-chip">Yosemite Valley</span>
+                    <span class="location-chip">Catheys Valley</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="location-card">
+                  <div class="location-card__header">
+                    <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <h4 class="location-card__title">Fresno County</h4>
+                  </div>
+                  <div class="location-card__chips">
+                    <span class="location-chip">Auberry</span>
+                    <span class="location-chip">Big Creek</span>
+                    <span class="location-chip">Biola</span>
+                    <span class="location-chip">Burrel</span>
+                    <span class="location-chip">Cantua Creek</span>
+                    <span class="location-chip">Caruthers</span>
+                    <span class="location-chip">Clovis</span>
+                    <span class="location-chip">Coalinga</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -982,9 +1097,9 @@
             <div class="feedback-wrapper">
               <div class="vs-title vs-title--style2 title-anime animation-style2">
                 <div class="title-anime__wrap">
-                  <span class="vs-title__sub">faq feedback</span>
+                  <span class="vs-title__sub">testimonials</span>
                   <h2 class="vs-title__main pe-xl-3">
-                    Words of <span>Trust</span> from Our Families
+                    Voices of <span>Trust</span> from Our Clients
                   </h2>
                 </div>
               </div>
@@ -1103,20 +1218,23 @@
               <div class="vs-blog vs-blog--style2">
                 <div class="vs-blog__inner" style="height: 600px;">
                   <div class="vs-blog__img">
-                    <a href="https://www.ausomebee.com/why-do-some-kids-need-speech-therapy/" target="_blank">
-                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/blog/blog-h1-2.jpg" alt="Blog" loading="lazy" />
+                    <a href="posts/why-do-some-kids-need-speech-therapy.html">
+
+                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="Why Do Some Kids Need Speech Therapy?" loading="lazy" />
                     </a>
                   </div>
                   <div class="vs-blog__content">
                     <div class="vs-blog__meta">
                       <a class="vs-blog__meta--link"
-                        href="https://www.ausomebee.com/why-do-some-kids-need-speech-therapy/" target="_blank">
+                        href="posts/why-do-some-kids-need-speech-therapy.html">
+
                         <i class="fa-regular fa-calendar-days"></i>1st.
                         August 2025
                       </a>
                     </div>
                     <a class="vs-blog__heading--link"
-                      href="https://www.ausomebee.com/why-do-some-kids-need-speech-therapy/" target="_blank">
+                      href="posts/why-do-some-kids-need-speech-therapy.html">
+
                       <h3 class="vs-blog__heading">Why Do Some Kids Need Speech Therapy?</h3>
                     </a>
                     <p class="vs-blog__desc">
@@ -1124,10 +1242,11 @@
                       language skills comes naturally as part of their development...
                     </p>
                     <div class="vs-blog__bottom">
-                      <a href="https://www.ausomebee.com/why-do-some-kids-need-speech-therapy/" target="_blank"
+                      <a href="posts/why-do-some-kids-need-speech-therapy.html"
                         class="vs-blog__link">
                         Read more<i class="fa-solid fa-arrow-right"></i>
                       </a>
+
                       <div class="vs-blog__share">
                         <ul>
                           <li>
@@ -1166,30 +1285,34 @@
               <div class="vs-blog vs-blog--style2">
                 <div class="vs-blog__inner" style="height: 600px;">
                   <div class="vs-blog__img">
-                    <a href="https://www.ausomebee.com/toys-for-children-with-sensory-processing/" target="_blank">
-                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/blog/blog-h1-1.jpg" alt="Blog" loading="lazy" />
+                    <a href="posts/toys-for-children-with-sensory-processing.html">
+
+                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg" alt="Toys for Children with Sensory Processing" loading="lazy" />
                     </a>
                   </div>
                   <div class="vs-blog__content">
                     <div class="vs-blog__meta">
                       <a class="vs-blog__meta--link"
-                        href="https://www.ausomebee.com/toys-for-children-with-sensory-processing/" target="_blank">
+                        href="posts/toys-for-children-with-sensory-processing.html">
+
                         <i class="fa-regular fa-calendar-days"></i>1st.
                         August 2025
                       </a>
                     </div>
                     <a class="vs-blog__heading--link"
-                      href="https://www.ausomebee.com/toys-for-children-with-sensory-processing/" target="_blank">
+                      href="posts/toys-for-children-with-sensory-processing.html">
+
                       <h3 class="vs-blog__heading">Toys for Children with Sensory Processing</h3>
                     </a>
                     <p class="vs-blog__desc">
                       For children with sensory processing difficulties, playtime can be overwhelming and challenging...
                     </p>
                     <div class="vs-blog__bottom">
-                      <a href="https://www.ausomebee.com/toys-for-children-with-sensory-processing/" target="_blank"
+                      <a href="posts/toys-for-children-with-sensory-processing.html"
                         class="vs-blog__link">
                         Read more<i class="fa-solid fa-arrow-right"></i>
                       </a>
+
                       <div class="vs-blog__share">
                         <ul>
                           <li>
@@ -1228,20 +1351,23 @@
               <div class="vs-blog vs-blog--style2">
                 <div class="vs-blog__inner" style="height: 600px;">
                   <div class="vs-blog__img">
-                    <a href="https://www.ausomebee.com/picture-books-therapists-can-use-to-promote/" target="_blank">
-                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/gallery/gallery-h1-1-2.jpg" alt="Blog" loading="lazy" />
+                    <a href="posts/picture-books-therapists-can-use-to-promote.html">
+
+                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/pexels-kseniachernaya-8535163.jpg" alt="Picture Books Therapists Can Use to Promote" loading="lazy" />
                     </a>
                   </div>
                   <div class="vs-blog__content">
                     <div class="vs-blog__meta">
                       <a class="vs-blog__meta--link"
-                        href="https://www.ausomebee.com/picture-books-therapists-can-use-to-promote/" target="_blank">
+                        href="posts/picture-books-therapists-can-use-to-promote.html">
+
                         <i class="fa-regular fa-calendar-days"></i>1st.
                         August 2025
                       </a>
                     </div>
                     <a class="vs-blog__heading--link"
-                      href="https://www.ausomebee.com/picture-books-therapists-can-use-to-promote/" target="_blank">
+                      href="posts/picture-books-therapists-can-use-to-promote.html">
+
                       <h3 class="vs-blog__heading">Picture Books Therapists Can Use to Promote</h3>
                     </a>
                     <p class="vs-blog__desc">
@@ -1249,10 +1375,11 @@
                       stories and vibrant illustrations...
                     </p>
                     <div class="vs-blog__bottom">
-                      <a href="https://www.ausomebee.com/picture-books-therapists-can-use-to-promote/" target="_blank"
+                      <a href="posts/picture-books-therapists-can-use-to-promote.html"
                         class="vs-blog__link">
                         Read more<i class="fa-solid fa-arrow-right"></i>
                       </a>
+
                       <div class="vs-blog__share">
                         <ul>
                           <li>
@@ -1340,7 +1467,7 @@
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="services.html">Our Services</a></li>
                   <li>
-                    <a href="https://www.ausomebee.com/blog/" target="_blank">Resources</a>
+                    <a href="blog.html">Resources</a>
                   </li>
                   <li><a href="careers.html">Careers</a></li>
                   <li><a href="contact.html">Contact</a></li>
@@ -1352,43 +1479,6 @@
                   <a href="https://ausomebee.com" target="_blank" class="vs-theme-color">Awesome Bee at
                     ausomebee.com</a>
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
-            <div class="vs-footer__widget">
-              <h3 class="vs-footer__title">Instagram</h3>
-              <div class="sidebar-gallery">
-                <div class="gallery-thumb">
-                  <img src="assets/img/widget/gal-1-1.jpg" alt="Gallery Image" class="w-100" />
-                  <a href="assets/img/widget/gal-1-1-big.jpg" class="popup-image gal-btn"><i
-                      class="fas fa-plus"></i></a>
-                </div>
-                <div class="gallery-thumb">
-                  <img src="assets/img/widget/gal-1-2.jpg" alt="Gallery Image" class="w-100" />
-                  <a href="assets/img/widget/gal-1-2-big.jpg" class="popup-image gal-btn"><i
-                      class="fas fa-plus"></i></a>
-                </div>
-                <div class="gallery-thumb">
-                  <img src="assets/img/widget/gal-1-3.jpg" alt="Gallery Image" class="w-100" />
-                  <a href="assets/img/widget/gal-1-3-big.jpg" class="popup-image gal-btn"><i
-                      class="fas fa-plus"></i></a>
-                </div>
-                <div class="gallery-thumb">
-                  <img src="assets/img/widget/gal-1-4.jpg" alt="Gallery Image" class="w-100" />
-                  <a href="assets/img/widget/gal-1-4-big.jpg" class="popup-image gal-btn"><i
-                      class="fas fa-plus"></i></a>
-                </div>
-                <div class="gallery-thumb">
-                  <img src="assets/img/widget/gal-1-5.jpg" alt="Gallery Image" class="w-100" />
-                  <a href="assets/img/widget/gal-1-5-big.jpg" class="popup-image gal-btn"><i
-                      class="fas fa-plus"></i></a>
-                </div>
-                <div class="gallery-thumb">
-                  <img src="assets/img/widget/gal-1-6.jpg" alt="Gallery Image" class="w-100" />
-                  <a href="assets/img/widget/gal-1-6-big.jpg" class="popup-image gal-btn"><i
-                      class="fas fa-plus"></i></a>
-                </div>
               </div>
             </div>
           </div>
@@ -1406,8 +1496,8 @@
           </div>
           <div class="col-md-auto">
             <ul class="vs-footer__bottom--menu">
-              <li><a href="about.html">Terms & Conditions</a></li>
-              <li><a href="about.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms & Conditions</a></li>
+              <li><a href="policy.html">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
