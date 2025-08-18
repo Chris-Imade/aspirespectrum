@@ -61,6 +61,43 @@
       max-width: 230px;
       height: auto;
     }
+
+    /* Responsive fixes for Open Positions cards */
+    @media (max-width: 767.98px) {
+      /* Stack card content vertically on small screens */
+      .vs-blog--style2 .vs-blog__inner {
+        flex-direction: column !important;
+        gap: 0 !important;
+      }
+
+      /* Make the left icon area full-width banner */
+      .vs-blog--style2 .vs-blog__img {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        min-height: 150px;
+      }
+
+      .vs-blog--style2 .vs-blog__img i {
+        font-size: 2.5rem !important;
+      }
+
+      /* Comfortable padding on content on mobile */
+      .vs-blog--style2 .vs-blog__content {
+        padding: 16px !important;
+      }
+
+      /* Wrap meta items and action row nicely */
+      .vs-blog--style2 .vs-blog__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+      }
+
+      .vs-blog--style2 .d-flex.align-items-center {
+        flex-wrap: wrap;
+        gap: 10px 12px;
+      }
+    }
   </style>
 </head>
 
