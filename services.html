@@ -55,6 +55,89 @@
   <link rel="stylesheet" href="assets/css/animate.min.css" />
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Horizontal Service Cards */
+    .service-card {
+      display: flex;
+      gap: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, .06);
+      transition: transform .25s ease, box-shadow .25s ease;
+      min-height: 260px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(16, 24, 40, .12);
+    }
+
+    .service-card__media {
+      flex: 0 0 320px;
+      background: #eef2f7;
+      position: relative;
+      height: 260px;
+    }
+
+    .service-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-card__body {
+      padding: 18px 18px 18px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-card__title {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+      color: #0f172a;
+    }
+
+    .service-card__desc {
+      margin: 0 0 14px;
+      color: #475569;
+    }
+
+    .service-card__cta .vs-btn {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    @media (max-width: 991.98px) {
+      .service-card__media {
+        flex-basis: 240px;
+        height: 240px;
+      }
+
+      .service-card {
+        min-height: 240px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .service-card {
+        flex-direction: column;
+        min-height: unset;
+      }
+
+      .service-card__media {
+        flex-basis: auto;
+        height: 220px;
+      }
+
+      .service-card__body {
+        padding: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -140,7 +223,7 @@
             </a>
           </li>
           <li class="">
-            <a class="vs-svg-assets" target="_blank" href="https://www.ausomebee.com/blog/">
+            <a class="vs-svg-assets" target="_blank" href="blog.html">
               Resources
               <svg xmlns="http://www.w3.org/2000/svg" width="87" height="31" viewBox="0 0 87 31" fill="none">
                 <path
@@ -325,7 +408,7 @@
                     </a>
                   </li>
                   <li class="">
-                    <a class="vs-svg-assets" target="_blank" href="https://www.ausomebee.com/blog/">
+                    <a class="vs-svg-assets" target="_blank" href="blog.html">
                       Resources
                       <svg xmlns="http://www.w3.org/2000/svg" width="87" height="31" viewBox="0 0 87 31" fill="none">
                         <path
@@ -352,8 +435,8 @@
                 <div class="d-none d-xxl-inline-flex">
                   <a href="contact.html" class="vs-btn"><span class="vs-btn__border"></span>Contact</a>
                 </div>
-                <div class="d-none d-lg-inline-flex align-items-center">
-                  <button class="sideMenuToggler">
+                <div class="d-inline-flex d-lg-none align-items-center">
+                  <button class="sideMenuToggler" aria-label="Open Side Menu">
                     <svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M2.9165 4.5H28.4165C29.6594 4.5 30.6665 3.49292 30.6665 2.25C30.6665 1.00708 29.6594 0 28.4165 0H2.9165C1.67358 0 0.666504 1.00708 0.666504 2.25C0.666504 3.49292 1.67358 4.5 2.9165 4.5Z"
@@ -410,156 +493,152 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon">
-                  <img src="assets/img/icons/service-icon-1-1.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg"
+                    alt="Assessment" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Assessment</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  At Aspire Spectrum, we offer comprehensive Assessment utilizing the principles of Applied Behavior
-                  Analysis (ABA). Our devoted team of behavior therapists collaborates with our clients and their
-                  families to conduct thorough assessments to understand individuals’ unique behavioral challenges.
-                  Through careful observation and data analysis, we develop personalized treatment plans to promote
-                  positive and lasting change. Trust us to provide evidence-based assessments that lay the foundation
-                  for effective behavior therapy. Contact us today to begin the journey toward meaningful progress.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit" href="services/assessment.html">Assessment</a>
+                  </h3>
+                  <p class="service-card__desc">We offer comprehensive ABA-based assessments to understand unique
+                    behavioral challenges and develop personalized treatment plans to promote positive change.</p>
+                  <div class="service-card__cta"><a class="vs-btn" href="services/assessment.html"><span
+                        class="vs-btn__border"></span>View details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon">
-                  <img src="assets/img/icons/service-icon-1-2.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-yankrukov-8612971.jpg"
+                    alt="Autism & Behavioral Services" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Autism & Behavioral Services</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  We aim to enhance the opportunities to tailor data-driven behavioral interventions to meet the unique
-                  needs and preferences of each individual with behavioral challenges (offering flexibility for skills
-                  development), leverage the natural environment of each individual’s home and community to aid in
-                  generalizing acquired skills into everyday routines, collaborate effectively with families, and
-                  minimize barriers and inconvenience they may face.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit"
+                      href="services/autism-and-behavioral-services.html">Autism & Behavioral Services</a></h3>
+                  <p class="service-card__desc">Data-driven behavioral interventions tailored to each individual,
+                    leveraging home and community environments and collaborating effectively with families.</p>
+                  <div class="service-card__cta"><a class="vs-btn"
+                      href="services/autism-and-behavioral-services.html"><span class="vs-btn__border"></span>View
+                      details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon">
-                  <img src="assets/img/icons/service-icon-1-3.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-kseniachernaya-8535163.jpg"
+                    alt="Early Intervention" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Early Intervention</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Unlock your child’s potential with Aspire Spectrum’s evidence-based Early Intervention services, which
-                  leverages a naturalistic teaching approach and utilizes strategies based on Early Start Denver Model
-                  (ESDM) and Pivotal Response Treatment (PRT). Our tailored ABA programs promote holistic development,
-                  individualized support, and family-centered care, making us the trusted choice for exceptional
-                  outcomes. Contact us today.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit" href="services/early-intervention.html">Early
+                      Intervention</a></h3>
+                  <p class="service-card__desc">Evidence-based early intervention using naturalistic teaching with
+                    strategies from ESDM and PRT, focused on holistic development and family-centered care.</p>
+                  <div class="service-card__cta"><a class="vs-btn" href="services/early-intervention.html"><span
+                        class="vs-btn__border"></span>View details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon icon-background">
-                  <img src="assets/img/icons/h1-class-icon-1.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg"
+                    alt="Daily Living or Adaptive Skills" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Daily Living or Adaptive Skills</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Enhance daily living skills with Aspire Spectrum’s evidence-based ABA services. Our specialized
-                  programs empower individuals to develop essential adaptive skills, fostering independence and
-                  improving their quality of life. Choose Aspire Spectrum as your trusted provider for comprehensive
-                  support, tailored interventions, and a dedicated team committed to unlocking potential. Contact us
-                  today for transformative outcomes.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit"
+                      href="services/daily-living-adaptive-skills.html">Daily Living or Adaptive Skills</a></h3>
+                  <p class="service-card__desc">Programs that build essential adaptive skills, foster independence, and
+                    improve quality of life through tailored ABA interventions.</p>
+                  <div class="service-card__cta"><a class="vs-btn"
+                      href="services/daily-living-adaptive-skills.html"><span class="vs-btn__border"></span>View
+                      details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon icon-background">
-                  <img src="assets/img/icons/h1-class-icon-2.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg"
+                    alt="Social Skills" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Social Skills</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Boost social competence with Aspire Spectrum’s ABA services. Our targeted interventions develop
-                  essential social skills, promoting meaningful connections and positive interactions. Choose us as your
-                  provider to empower individuals with effective strategies, personalized programs, and a supportive
-                  team dedicated to enhancing social inclusion and fostering social success.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit" href="services/social-skills.html">Social
+                      Skills</a></h3>
+                  <p class="service-card__desc">Targeted interventions that build social competence, meaningful
+                    connections, and positive interactions.</p>
+                  <div class="service-card__cta"><a class="vs-btn" href="services/social-skills.html"><span
+                        class="vs-btn__border"></span>View details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon icon-background">
-                  <img src="assets/img/icons/h1-class-icon-3.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-yankrukov-8613094.jpg"
+                    alt="Functional Communication Training" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Functional Communication Training</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Boost social competence with Aspire Spectrum’s ABA services. Our targeted interventions develop
-                  essential social skills, promoting meaningful connections and positive interactions. Choose us as your
-                  provider to empower individuals with effective strategies, personalized programs, and a supportive
-                  team dedicated to enhancing social inclusion and fostering social success.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit"
+                      href="services/functional-communication-training.html">Functional Communication Training</a></h3>
+                  <p class="service-card__desc">Teaching functional alternatives to challenging behavior by building
+                    effective communication skills.</p>
+                  <div class="service-card__cta"><a class="vs-btn"
+                      href="services/functional-communication-training.html"><span class="vs-btn__border"></span>View
+                      details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon">
-                  <img src="assets/img/icons/feature-icon-h2-1.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467262.jpg"
+                    alt="Expressive & Receptive Language" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Expressive & Receptive Language</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Enhance language abilities with Aspire Spectrum’s ABA services. Our expert team tailors interventions
-                  to develop expressive and receptive language skills, facilitating effective communication and language
-                  comprehension. Choose us as your provider to empower individuals with personalized strategies,
-                  evidence-based practices, and a comprehensive approach to language development.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit"
+                      href="services/expressive-receptive-language.html">Expressive & Receptive Language</a></h3>
+                  <p class="service-card__desc">Personalized strategies to develop expressive and receptive language for
+                    effective communication and comprehension.</p>
+                  <div class="service-card__cta"><a class="vs-btn"
+                      href="services/expressive-receptive-language.html"><span class="vs-btn__border"></span>View
+                      details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon">
-                  <img src="assets/img/icons/feature-icon-h2-2.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg"
+                    alt="Verbal Communication" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Verbal Communication</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Promote verbal communication with Aspire Spectrum’s specialized ABA services. Our interventions focus
-                  on facilitating verbal expression, enabling individuals to communicate effectively and confidently.
-                  Experience the transformative power of Aspire Spectrum as your provider with a dedicated team,
-                  evidence-based strategies, and tailored programs that empower individuals to unlock their full verbal
-                  communication potential.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit"
+                      href="services/verbal-communication.html">Verbal Communication</a></h3>
+                  <p class="service-card__desc">Interventions that facilitate verbal expression and confidence for
+                    clear, effective communication.</p>
+                  <div class="service-card__cta"><a class="vs-btn" href="services/verbal-communication.html"><span
+                        class="vs-btn__border"></span>View details</a></div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="vs-service-box">
-                <div class="vs-service-box__icon">
-                  <img src="assets/img/icons/feature-icon-h2-3.svg" alt="Service" />
+            <div class="col-12">
+              <div class="service-card">
+                <div class="service-card__media">
+                  <img class="service-card__image" src="assets/img/custom/pexels-jep-gambardella-6222768.jpg"
+                    alt="Evidence-based Therapy" />
                 </div>
-                <h3 class="vs-service-box__title">
-                  <a class="text-inherit" href="service-details.html">Evidence-based Therapy</a>
-                </h3>
-                <p class="vs-service-box__text">
-                  Our dedicated team of professionals and therapists connects with families remotely (over secure
-                  channels), and/or in-person at home, schools, or community settings to deliver evidence-based, applied
-                  behavior analysis (ABA) therapy services. In selected cities in the US and Canada, our behavior
-                  therapists will deliver therapy services to clients’ home, schools or in a community setting to meet
-                  the goals of the developed individualized behavior plans. See our community map for cities covered, as
-                  we continue to expand our reach and coverage.
-                </p>
+                <div class="service-card__body">
+                  <h3 class="service-card__title"><a class="text-inherit"
+                      href="services/evidence-based-therapy.html">Evidence-based Therapy</a></h3>
+                  <p class="service-card__desc">In-home, community, or remote ABA therapy delivered by trained
+                    professionals to meet individualized behavior plan goals.</p>
+                  <div class="service-card__cta"><a class="vs-btn" href="services/evidence-based-therapy.html"><span
+                        class="vs-btn__border"></span>View details</a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -612,18 +691,31 @@
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="services.html">Our Services</a></li>
-                  <li><a href="https://www.ausomebee.com/blog/" target="_blank">Resources</a></li>
+                  <li><a href="blog.html" target="_blank">Resources</a></li>
                   <li><a href="careers.html">Careers</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div>
               <div class="mt-30">
-                <p class="vs-footer__desc">
-                  <strong>Visit our other branch:</strong><br>
-                  <a href="https://ausomebee.com" target="_blank" class="vs-theme-color">Awesome Bee at
-                    ausomebee.com</a>
-                </p>
+
               </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
+            <div class="vs-footer__widget">
+              <h3 class="vs-footer__title">Subscribe to our newsletter</h3>
+              <p class="mb-15">Get helpful resources, tips, and updates from Aspire Spectrum.</p>
+              <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                <label for="footer-email-services" class="visually-hidden">Email address</label>
+                <div class="input-group">
+                  <input id="footer-email-services" type="email" class="form-control" placeholder="Your email" required />
+                  <button type="submit" class="vs-btn" aria-label="Subscribe to newsletter">
+                    <span class="vs-btn__border"></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+                <small class="d-block mt-2 opacity-75">We respect your privacy. Unsubscribe anytime.</small>
+              </form>
             </div>
           </div>
         </div>

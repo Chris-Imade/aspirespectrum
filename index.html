@@ -108,9 +108,9 @@
     .offer-card__media { position: relative; aspect-ratio: 16/10; background: #eef2f7; }
     .offer-card__image { width: 100%; height: 100%; object-fit: cover; display: block; }
     .offer-card__icon { position: absolute; left: 14px; top: 14px; width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.9); display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(2, 6, 23, .08); box-shadow: 0 2px 10px rgba(16,24,40,.08); }
-    .offer-card__body { padding: 18px 18px 20px; }
+    .offer-card__body { padding: 18px 18px 20px; display: flex; flex-direction: column; height: 100%; }
     .offer-card__title { font-size: 1.05rem; margin: 0 0 10px; color: #0f172a; }
-    .offer-card__cta { display: inline-flex; align-items: center; gap: 6px; color: #2563eb; text-decoration: none; font-weight: 600; }
+    .offer-card__cta { display: inline-flex; align-items: center; gap: 6px; color: #2563eb; text-decoration: none; font-weight: 600; margin-top: auto; }
     .offer-card__cta svg { transition: transform .2s ease; }
     .offer-card__cta:hover svg { transform: translateX(4px); }
     /* Blog carousel: Flex fallback when Swiper isn't initialized */
@@ -131,6 +131,34 @@
     @media (max-width: 575.98px) {
       .vs-carousel.swiper:not(.swiper-initialized) .swiper-wrapper { gap: 16px; }
       .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide { flex-basis: 100%; }
+    }
+    /* Footer newsletter: 80/20 input/button layout, icon button, responsive stack */
+    .footer-newsletter { width: 100%; display: block; }
+    .footer-newsletter .input-group { display: flex; gap: 12px; align-items: stretch; width: 100%; flex-wrap: nowrap; margin-bottom: 8px; }
+    .footer-newsletter .form-control {
+      flex: 0 0 calc(80% - 12px); /* subtract gap to avoid wrap */
+      min-width: 0;
+      height: 48px;
+      border-radius: 12px;
+      padding: 10px 14px;
+      border: 1px solid rgba(2, 6, 23, .12);
+      background: #fff;
+    }
+    .footer-newsletter .vs-btn {
+      flex: 0 0 20%;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0; /* icon-only */
+      border-radius: 12px;
+    }
+    .footer-newsletter .vs-btn i { font-size: 18px; line-height: 1; }
+    .footer-newsletter small { font-size: 12px; display: block; margin-top: 0; }
+    @media (max-width: 575.98px) {
+      .footer-newsletter .input-group { flex-direction: column; gap: 10px; }
+      .footer-newsletter .vs-btn { width: 100%; flex-basis: auto; }
+      .footer-newsletter .form-control { width: 100%; flex-basis: auto; }
     }
   </style>
 </head>
@@ -459,8 +487,8 @@
                 <div class="d-none d-xxl-inline-flex">
                   <a href="contact.html" class="vs-btn"><span class="vs-btn__border"></span>Contact</a>
                 </div>
-                <div class="d-none d-lg-inline-flex align-items-center">
-                  <button class="sideMenuToggler">
+                <div class="d-inline-flex d-lg-none align-items-center">
+                  <button class="sideMenuToggler" aria-label="Open Side Menu">
                     <svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M2.9165 4.5H28.4165C29.6594 4.5 30.6665 3.49292 30.6665 2.25C30.6665 1.00708 29.6594 0 28.4165 0H2.9165C1.67358 0 0.666504 1.00708 0.666504 2.25C0.666504 3.49292 1.67358 4.5 2.9165 4.5Z"
@@ -531,7 +559,7 @@
                     Dedicated Care & <span>Support</span>
                   </h1>
                   <p class="vs-hero__desc vs-hero__anim">
-                    Helping every child reach their full potential.
+                    Our dedicated team of professionals and therapists connects with families to deliver evidence-based, applied behavior analysis (ABA) therapy services.
                   </p>
                   <a href="contact.html" class="vs-btn vs-hero__btn vs-hero__anim"><span
                       class="vs-btn__border"></span>Know More</a>
@@ -1438,8 +1466,7 @@
                 </a>
               </div>
               <p class="vs-footer__desc text-center text-md-start">
-                Pre-school has open door and also offer free trial session in
-                child.
+                Empowering Individuals With Developmental Delays And Autism Through Compassionate ABA Therapy.
               </p>
               <div class="icon-call justify-content-center justify-content-md-start pt-10 mb-10">
                 <span class="icon-call__icon"><i class="fa-solid fa-phone-rotary"></i></span>
@@ -1474,12 +1501,25 @@
                 </ul>
               </div>
               <div class="mt-30">
-                <p class="vs-footer__desc">
-                  <strong>Visit our other branch:</strong><br />
-                  <a href="https://ausomebee.com" target="_blank" class="vs-theme-color">Awesome Bee at
-                    ausomebee.com</a>
-                </p>
+                
               </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
+            <div class="vs-footer__widget">
+              <h3 class="vs-footer__title">Subscribe to our Newsletter</h3>
+              <p class="mb-15">Get practical tips and new articles delivered to your inbox.</p>
+              <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                <label for="footer-email-index" class="visually-hidden">Email address</label>
+                <div class="input-group">
+                  <input id="footer-email-index" type="email" class="form-control" placeholder="Your email" required />
+                  <button type="submit" class="vs-btn" aria-label="Subscribe to newsletter">
+                    <span class="vs-btn__border"></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+                <small class="d-block mt-2 opacity-75">We respect your privacy. Unsubscribe anytime.</small>
+              </form>
             </div>
           </div>
         </div>

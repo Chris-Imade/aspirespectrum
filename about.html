@@ -726,15 +726,27 @@
                 </ul>
               </div>
               <div class="mt-30">
-                <p class="vs-footer__desc">
-                  <strong>Visit our other branch:</strong><br>
-                  <a href="https://ausomebee.com" target="_blank" class="vs-theme-color">Awesome Bee at
-                    ausomebee.com</a>
-                </p>
+
               </div>
             </div>
           </div>
-
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
+            <div class="vs-footer__widget">
+              <h3 class="vs-footer__title">Subscribe to our newsletter</h3>
+              <p class="mb-15">Get helpful resources, tips, and updates from Aspire Spectrum.</p>
+              <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                <label for="footer-email-about" class="visually-hidden">Email address</label>
+                <div class="input-group">
+                  <input id="footer-email-about" type="email" class="form-control" placeholder="Your email" required />
+                  <button type="submit" class="vs-btn" aria-label="Subscribe to newsletter">
+                    <span class="vs-btn__border"></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+                <small class="d-block mt-2 opacity-75">We respect your privacy. Unsubscribe anytime.</small>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
