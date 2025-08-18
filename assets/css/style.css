@@ -4,13 +4,14 @@
     01. Style
 ==================================*/
 :root {
-  --vs-theme-color1: #7fc780;
-  --vs-theme-color1-rgb: 112, 22, 126;
-  --vs-theme-color2: #ff6e5c;
-  --vs-theme-color2-rgb: 209, 129, 9;
-  --vs-theme-color3: #a60c56;
-  --vs-theme-color4: #4f830e;
-  --vs-theme-color5: #ff6e5c;
+  /* Map to brand palette */
+  --vs-theme-color1: #7FC780;          /* Mantis */
+  --vs-theme-color1-rgb: 127, 199, 128;
+  --vs-theme-color2: #FF6E5C;          /* Bittersweet */
+  --vs-theme-color2-rgb: 255, 110, 92;
+  --vs-theme-color3: #8E3FAE;          /* Purpureus */
+  --vs-theme-color4: #00BFA5;          /* Keppel */
+  --vs-theme-color5: #FFC100;          /* Amber (accent) */
   --vs-theme-color6: #f6f1e4;
   --vs-theme-color7: #ffefe4;
   --vs-theme-color8: #ffefe4;
@@ -23,7 +24,8 @@
   --vs-black-color: #000000;
   --vs-white-color: #ffffff;
   --vs-white-color-rgb: 255, 255, 255;
-  --vs-yellow-color: #fec624;
+  /* Align yellow to brand Amber */
+  --vs-yellow-color: #FFC100;
   --vs-success-color: #28a745;
   --vs-error-color: #dc3545;
   --vs-border-color: #e0e0e0;
@@ -37,6 +39,34 @@
   --vs-section-space-mobile: 80px;
   --vs-section-title-space: 80px;
   --ripple-ani-duration: 5s;
+
+  /* Brand palette tokens */
+  /* Primaries */
+  --brand-bittersweet: #FF6E5C;   /* warm coral */
+  --brand-amber: #FFC100;         /* vivid amber */
+  --brand-keppel: #00BFA5;        /* teal */
+  --brand-mantis: #7FC780;        /* green */
+  --brand-purpureus: #8E3FAE;     /* purple */
+
+  /* Light tints / extensions */
+  --brand-tint-orange: #FF8D46;
+  --brand-tint-purple: #9C80EF;
+  --brand-tint-blue: #1D80BF;
+  --brand-tint-red: #FF8180;
+
+  /* On-color (text/icon) recommendations for AA contrast */
+  --on-bittersweet: #0A0A0A; /* near-black */
+  --on-amber: #0A0A0A;
+  --on-keppel: #0A0A0A;
+  --on-mantis: #0A0A0A;
+  --on-purpureus: #FFFFFF;
+
+  /* Neutral alphas (30%) over white; use rgba for layering */
+  --neutral-amber-30: rgba(255, 193, 0, 0.3);
+  --neutral-bittersweet-30: rgba(255, 110, 92, 0.3);
+  --neutral-keppel-30: rgba(0, 191, 165, 0.3);
+  --neutral-mantis-30: rgba(127, 199, 128, 0.3);
+  --neutral-purpureus-30: rgba(142, 63, 174, 0.3);
 }
 
 /*------------------- 1.5. Reset -------------------*/
@@ -11710,19 +11740,19 @@ blockquote.vs-quote .quote-author {
   border: var(--border-size) solid var(--vs-theme-color2);
 }
 .product-swatches-container .swatch.swatch2 {
-  background-color: #e63b3f;
+  background-color: var(--brand-bittersweet);
 }
 .product-swatches-container .swatch.swatch2.active {
   border: var(--border-size) solid var(--vs-theme-color2);
 }
 .product-swatches-container .swatch.swatch3 {
-  background-color: #4f830e;
+  background-color: var(--brand-mantis);
 }
 .product-swatches-container .swatch.swatch3.active {
   border: var(--border-size) solid var(--vs-theme-color2);
 }
 .product-swatches-container .swatch.swatch4 {
-  background-color: #53a1af;
+  background-color: var(--brand-tint-blue);
 }
 .product-swatches-container .swatch.swatch4.active {
   border: var(--border-size) solid var(--vs-theme-color2);
