@@ -59,22 +59,29 @@
   <style>
     .vs-header__logo>a>.logo {
       max-width: 230px;
-      height: auto;
+      height: 80px;
     }
+
     /* Service image sizing: ensure images fill their parent */
     .vs-service__image--link {
       display: block;
       width: 100%;
-      height: 284px; /* matches card figure height */
+      height: 284px;
+      /* matches card figure height */
     }
+
     .vs-service__image {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     /* Our Locations cards */
-    .location-grid { margin-top: 20px; }
+    .location-grid {
+      margin-top: 20px;
+    }
+
     .location-card {
       background: rgba(255, 255, 255, 0.12);
       border: 1px solid rgba(255, 255, 255, 0.25);
@@ -85,58 +92,201 @@
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
       backdrop-filter: blur(6px);
     }
+
     .location-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
       background: rgba(255, 255, 255, 0.16);
     }
-    .location-card__header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .location-card__icon { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,.18); border: 1px dashed rgba(255,255,255,.4); }
-    .location-card__icon i { color: #fff; }
-    .location-card__title { margin: 0; font-size: 1.1rem; }
-    .location-card__chips { margin-top: 6px; }
-    .location-chip { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); color: #fff; font-size: .85rem; margin: 6px 6px 0 0; white-space: nowrap; }
-    @media (max-width: 575.98px) {
-      .location-card { padding: 16px; }
-      .location-card__title { font-size: 1rem; }
-      .location-chip { font-size: .8rem; }
+
+    .location-card__header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
     }
+
+    .location-card__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, .18);
+      border: 1px dashed rgba(255, 255, 255, .4);
+    }
+
+    .location-card__icon i {
+      color: #fff;
+    }
+
+    .location-card__title {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .location-card__chips {
+      margin-top: 6px;
+    }
+
+    .location-chip {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .25);
+      color: #fff;
+      font-size: .85rem;
+      margin: 6px 6px 0 0;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 575.98px) {
+      .location-card {
+        padding: 16px;
+      }
+
+      .location-card__title {
+        font-size: 1rem;
+      }
+
+      .location-chip {
+        font-size: .8rem;
+      }
+    }
+
     /* What We Offer - modern cards */
-    .offer-section { background: linear-gradient(180deg, #f9fafb 0%, #f4f6f8 100%); padding: 70px 0; }
-    .offer-card { background: #fff; border-radius: 16px; box-shadow: 0 6px 18px rgba(16,24,40,.08); overflow: hidden; height: 100%; transition: transform .25s ease, box-shadow .25s ease; }
-    .offer-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(16,24,40,.12); }
-    .offer-card__media { position: relative; aspect-ratio: 16/10; background: #eef2f7; }
-    .offer-card__image { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .offer-card__icon { position: absolute; left: 14px; top: 14px; width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.9); display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(2, 6, 23, .08); box-shadow: 0 2px 10px rgba(16,24,40,.08); }
-    .offer-card__body { padding: 18px 18px 20px; display: flex; flex-direction: column; height: 100%; }
-    .offer-card__title { font-size: 1.05rem; margin: 0 0 10px; color: #0f172a; }
-    .offer-card__cta { display: inline-flex; align-items: center; gap: 6px; color: #2563eb; text-decoration: none; font-weight: 600; margin-top: auto; }
-    .offer-card__cta svg { transition: transform .2s ease; }
-    .offer-card__cta:hover svg { transform: translateX(4px); }
+    .offer-section {
+      background: linear-gradient(180deg, #f9fafb 0%, #f4f6f8 100%);
+      padding: 70px 0;
+    }
+
+    .offer-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, .08);
+      overflow: hidden;
+      height: 100%;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(16, 24, 40, .12);
+    }
+
+    .offer-card__media {
+      position: relative;
+      aspect-ratio: 16/10;
+      background: #eef2f7;
+    }
+
+    .offer-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .offer-card__icon {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(2, 6, 23, .08);
+      box-shadow: 0 2px 10px rgba(16, 24, 40, .08);
+    }
+
+    .offer-card__body {
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .offer-card__title {
+      font-size: 1.05rem;
+      margin: 0 0 10px;
+      color: #0f172a;
+    }
+
+    .offer-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    .offer-card__cta svg {
+      transition: transform .2s ease;
+    }
+
+    .offer-card__cta:hover svg {
+      transform: translateX(4px);
+    }
+
     /* Blog carousel: Flex fallback when Swiper isn't initialized */
-    .row.vs-carousel.swiper:not(.swiper-initialized) { margin-left: 0; margin-right: 0; }
+    .row.vs-carousel.swiper:not(.swiper-initialized) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     .vs-carousel.swiper:not(.swiper-initialized) .swiper-wrapper {
       display: flex;
       gap: 24px;
     }
+
     .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide {
       flex: 0 0 calc((100% - 48px) / 3);
       padding-left: 0 !important;
       padding-right: 0 !important;
       box-sizing: border-box;
     }
+
     @media (max-width: 991.98px) {
-      .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide { flex-basis: calc((100% - 24px) / 2); }
+      .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide {
+        flex-basis: calc((100% - 24px) / 2);
+      }
     }
+
     @media (max-width: 575.98px) {
-      .vs-carousel.swiper:not(.swiper-initialized) .swiper-wrapper { gap: 16px; }
-      .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide { flex-basis: 100%; }
+      .vs-carousel.swiper:not(.swiper-initialized) .swiper-wrapper {
+        gap: 16px;
+      }
+
+      .vs-carousel.swiper:not(.swiper-initialized) .swiper-slide {
+        flex-basis: 100%;
+      }
     }
+
     /* Footer newsletter: 80/20 input/button layout, icon button, responsive stack */
-    .footer-newsletter { width: 100%; display: block; }
-    .footer-newsletter .input-group { display: flex; gap: 12px; align-items: stretch; width: 100%; flex-wrap: nowrap; margin-bottom: 8px; }
+    .footer-newsletter {
+      width: 100%;
+      display: block;
+    }
+
+    .footer-newsletter .input-group {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+      width: 100%;
+      flex-wrap: nowrap;
+      margin-bottom: 8px;
+    }
+
     .footer-newsletter .form-control {
-      flex: 0 0 calc(80% - 12px); /* subtract gap to avoid wrap */
+      flex: 0 0 calc(80% - 12px);
+      /* subtract gap to avoid wrap */
       min-width: 0;
       height: 48px;
       border-radius: 12px;
@@ -144,21 +294,44 @@
       border: 1px solid rgba(2, 6, 23, .12);
       background: #fff;
     }
+
     .footer-newsletter .vs-btn {
       flex: 0 0 20%;
       height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0; /* icon-only */
+      padding: 0;
+      /* icon-only */
       border-radius: 12px;
     }
-    .footer-newsletter .vs-btn i { font-size: 18px; line-height: 1; }
-    .footer-newsletter small { font-size: 12px; display: block; margin-top: 0; }
+
+    .footer-newsletter .vs-btn i {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .footer-newsletter small {
+      font-size: 12px;
+      display: block;
+      margin-top: 0;
+    }
+
     @media (max-width: 575.98px) {
-      .footer-newsletter .input-group { flex-direction: column; gap: 10px; }
-      .footer-newsletter .vs-btn { width: 100%; flex-basis: auto; }
-      .footer-newsletter .form-control { width: 100%; flex-basis: auto; }
+      .footer-newsletter .input-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-newsletter .vs-btn {
+        width: 100%;
+        flex-basis: auto;
+      }
+
+      .footer-newsletter .form-control {
+        width: 100%;
+        flex-basis: auto;
+      }
     }
   </style>
 </head>
@@ -304,7 +477,7 @@
       </div>
     </div>
   </div>
-  
+
   <!--==============================
         Header layout 1
     ==============================-->
@@ -438,7 +611,8 @@
             <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/hero/banner-1-1.jpg"></div>
             <div class="container container--custom">
               <div class="vs-hero__content">
-                <div class="vs-hero__shape" style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
+                <div class="vs-hero__shape"
+                  style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
                   <div class="vs-hero__shape--bg vs-hero__anim" style="display:none;"></div>
                   <span class="vs-hero__title--sub vs-hero__anim">
                     Evidence-Based Care!
@@ -461,7 +635,8 @@
             <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/hero/banner-1-2.jpeg"></div>
             <div class="container container--custom">
               <div class="vs-hero__content">
-                <div class="vs-hero__shape" style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
+                <div class="vs-hero__shape"
+                  style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
                   <div class="vs-hero__shape--bg vs-hero__anim" style="display:none;"></div>
                   <span class="vs-hero__title--sub vs-hero__anim">
                     Building Brighter Futures
@@ -470,7 +645,8 @@
                     Dedicated Care & <span>Support</span>
                   </h1>
                   <p class="vs-hero__desc vs-hero__anim">
-                    Our dedicated team of professionals and therapists connects with families to deliver evidence-based, applied behavior analysis (ABA) therapy services.
+                    Our dedicated team of professionals and therapists connects with families to deliver evidence-based,
+                    applied behavior analysis (ABA) therapy services.
                   </p>
                   <a href="contact.html" class="vs-btn vs-hero__btn vs-hero__anim"><span
                       class="vs-btn__border"></span>Know More</a>
@@ -652,13 +828,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.1s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg" alt="Data Collection &amp; Analysis" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22" height="22"></span>
+                <img class="offer-card__image" src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg"
+                  alt="Data Collection &amp; Analysis" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22"
+                    height="22"></span>
               </div>
               <div class="offer-card__body">
                 <h3 class="offer-card__title">Data Collection &amp; Analysis</h3>
                 <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -666,13 +847,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.2s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-alex-green-5692640.jpg" alt="Assessment &amp; Observation" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22" height="22"></span>
+                <img class="offer-card__image" src="assets/img/custom/pexels-alex-green-5692640.jpg"
+                  alt="Assessment &amp; Observation" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22"
+                    height="22"></span>
               </div>
               <div class="offer-card__body">
                 <h3 class="offer-card__title">Assessment &amp; Observation</h3>
                 <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -680,13 +866,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.3s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8613094.jpg" alt="Behavior Intervention Plan" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22" height="22"></span>
+                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8613094.jpg"
+                  alt="Behavior Intervention Plan" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22"
+                    height="22"></span>
               </div>
               <div class="offer-card__body">
                 <h3 class="offer-card__title">Behavior Intervention Plan</h3>
                 <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -694,13 +885,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.4s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg" alt="Parent Training &amp; Support" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22" height="22"></span>
+                <img class="offer-card__image" src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg"
+                  alt="Parent Training &amp; Support" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22"
+                    height="22"></span>
               </div>
               <div class="offer-card__body">
                 <h3 class="offer-card__title">Parent Training &amp; Support</h3>
                 <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -708,13 +904,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.5s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="Skill Acquisition Programs" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22" height="22"></span>
+                <img class="offer-card__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg"
+                  alt="Skill Acquisition Programs" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22"
+                    height="22"></span>
               </div>
               <div class="offer-card__body">
                 <h3 class="offer-card__title">Skill Acquisition Programs</h3>
                 <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -722,13 +923,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.6s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8612971.jpg" alt="Therapist-Led Sessions" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22" height="22"></span>
+                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8612971.jpg"
+                  alt="Therapist-Led Sessions" />
+                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22"
+                    height="22"></span>
               </div>
               <div class="offer-card__body">
                 <h3 class="offer-card__title">Therapist-Led Sessions</h3>
                 <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -759,7 +965,8 @@
                 <span class="vs-title__sub text-white">OUR LOCATIONS</span>
                 <h2 class="vs-title__main text-white">Where We Serve</h2>
               </div>
-              <p class="text-white mb-1">We currently serve cities and towns in these counties of California's Central Valley.</p>
+              <p class="text-white mb-1">We currently serve cities and towns in these counties of California's Central
+                Valley.</p>
               <p class="text-white fw-bold vs-text-bolder">We're growing and adding new cities regularly.</p>
             </div>
             <div class="row location-grid">
@@ -1028,8 +1235,6 @@
         class="sec-ele1 position-absolute start-0 end-0 bottom-0 z-index-n2" />
       <div class="feedback-image" data-bg-src="assets/img/feedback/feedback-image-1-1.jpg"></div>
       <div class="feedback-image--right" data-bg-src="assets/img/feedback/feedback-image-1-2.png"></div>
-      <img class="feedback--ele1 wow animate__fadeInRight" data-wow-delay="0.35s"
-        src="assets/img/feedback/vs-feedback-ele-1.png" alt="elements" />
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-lg-7">
@@ -1159,20 +1364,20 @@
                   <div class="vs-blog__img">
                     <a href="posts/why-do-some-kids-need-speech-therapy.html">
 
-                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="Why Do Some Kids Need Speech Therapy?" loading="lazy" />
+                      <img style="max-height: 220px; object-fit: cover;"
+                        src="assets/img/custom/pexels-kseniachernaya-8535183.jpg"
+                        alt="Why Do Some Kids Need Speech Therapy?" loading="lazy" />
                     </a>
                   </div>
                   <div class="vs-blog__content">
                     <div class="vs-blog__meta">
-                      <a class="vs-blog__meta--link"
-                        href="posts/why-do-some-kids-need-speech-therapy.html">
+                      <a class="vs-blog__meta--link" href="posts/why-do-some-kids-need-speech-therapy.html">
 
                         <i class="fa-regular fa-calendar-days"></i>1st.
                         August 2025
                       </a>
                     </div>
-                    <a class="vs-blog__heading--link"
-                      href="posts/why-do-some-kids-need-speech-therapy.html">
+                    <a class="vs-blog__heading--link" href="posts/why-do-some-kids-need-speech-therapy.html">
 
                       <h3 class="vs-blog__heading">Why Do Some Kids Need Speech Therapy?</h3>
                     </a>
@@ -1181,8 +1386,7 @@
                       language skills comes naturally as part of their development...
                     </p>
                     <div class="vs-blog__bottom">
-                      <a href="posts/why-do-some-kids-need-speech-therapy.html"
-                        class="vs-blog__link">
+                      <a href="posts/why-do-some-kids-need-speech-therapy.html" class="vs-blog__link">
                         Read more<i class="fa-solid fa-arrow-right"></i>
                       </a>
 
@@ -1226,20 +1430,20 @@
                   <div class="vs-blog__img">
                     <a href="posts/toys-for-children-with-sensory-processing.html">
 
-                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg" alt="Toys for Children with Sensory Processing" loading="lazy" />
+                      <img style="max-height: 220px; object-fit: cover;"
+                        src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg"
+                        alt="Toys for Children with Sensory Processing" loading="lazy" />
                     </a>
                   </div>
                   <div class="vs-blog__content">
                     <div class="vs-blog__meta">
-                      <a class="vs-blog__meta--link"
-                        href="posts/toys-for-children-with-sensory-processing.html">
+                      <a class="vs-blog__meta--link" href="posts/toys-for-children-with-sensory-processing.html">
 
                         <i class="fa-regular fa-calendar-days"></i>1st.
                         August 2025
                       </a>
                     </div>
-                    <a class="vs-blog__heading--link"
-                      href="posts/toys-for-children-with-sensory-processing.html">
+                    <a class="vs-blog__heading--link" href="posts/toys-for-children-with-sensory-processing.html">
 
                       <h3 class="vs-blog__heading">Toys for Children with Sensory Processing</h3>
                     </a>
@@ -1247,8 +1451,7 @@
                       For children with sensory processing difficulties, playtime can be overwhelming and challenging...
                     </p>
                     <div class="vs-blog__bottom">
-                      <a href="posts/toys-for-children-with-sensory-processing.html"
-                        class="vs-blog__link">
+                      <a href="posts/toys-for-children-with-sensory-processing.html" class="vs-blog__link">
                         Read more<i class="fa-solid fa-arrow-right"></i>
                       </a>
 
@@ -1292,20 +1495,20 @@
                   <div class="vs-blog__img">
                     <a href="posts/picture-books-therapists-can-use-to-promote.html">
 
-                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/pexels-kseniachernaya-8535163.jpg" alt="Picture Books Therapists Can Use to Promote" loading="lazy" />
+                      <img style="max-height: 220px; object-fit: cover;"
+                        src="assets/img/custom/pexels-kseniachernaya-8535163.jpg"
+                        alt="Picture Books Therapists Can Use to Promote" loading="lazy" />
                     </a>
                   </div>
                   <div class="vs-blog__content">
                     <div class="vs-blog__meta">
-                      <a class="vs-blog__meta--link"
-                        href="posts/picture-books-therapists-can-use-to-promote.html">
+                      <a class="vs-blog__meta--link" href="posts/picture-books-therapists-can-use-to-promote.html">
 
                         <i class="fa-regular fa-calendar-days"></i>1st.
                         August 2025
                       </a>
                     </div>
-                    <a class="vs-blog__heading--link"
-                      href="posts/picture-books-therapists-can-use-to-promote.html">
+                    <a class="vs-blog__heading--link" href="posts/picture-books-therapists-can-use-to-promote.html">
 
                       <h3 class="vs-blog__heading">Picture Books Therapists Can Use to Promote</h3>
                     </a>
@@ -1314,8 +1517,7 @@
                       stories and vibrant illustrations...
                     </p>
                     <div class="vs-blog__bottom">
-                      <a href="posts/picture-books-therapists-can-use-to-promote.html"
-                        class="vs-blog__link">
+                      <a href="posts/picture-books-therapists-can-use-to-promote.html" class="vs-blog__link">
                         Read more<i class="fa-solid fa-arrow-right"></i>
                       </a>
 
@@ -1412,7 +1614,7 @@
                 </ul>
               </div>
               <div class="mt-30">
-                
+
               </div>
             </div>
           </div>
@@ -1420,7 +1622,8 @@
             <div class="vs-footer__widget">
               <h3 class="vs-footer__title">Subscribe to our Newsletter</h3>
               <p class="mb-15">Get practical tips and new articles delivered to your inbox.</p>
-              <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+              <form class="footer-newsletter"
+                onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
                 <label for="footer-email-index" class="visually-hidden">Email address</label>
                 <div class="input-group">
                   <input id="footer-email-index" type="email" class="form-control" placeholder="Your email" required />

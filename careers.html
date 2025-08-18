@@ -59,11 +59,12 @@
   <style>
     .vs-header__logo>a>.logo {
       max-width: 230px;
-      height: auto;
+      height: 80px;
     }
 
     /* Responsive fixes for Open Positions cards */
     @media (max-width: 767.98px) {
+
       /* Stack card content vertically on small screens */
       .vs-blog--style2 .vs-blog__inner {
         flex-direction: column !important;
@@ -650,10 +651,12 @@
             <div class="vs-footer__widget">
               <h3 class="vs-footer__title">Subscribe to our newsletter</h3>
               <p class="mb-15">Get helpful resources, tips, and updates from Aspire Spectrum.</p>
-              <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+              <form class="footer-newsletter"
+                onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
                 <label for="footer-email-careers" class="visually-hidden">Email address</label>
                 <div class="input-group">
-                  <input id="footer-email-careers" type="email" class="form-control" placeholder="Your email" required />
+                  <input id="footer-email-careers" type="email" class="form-control" placeholder="Your email"
+                    required />
                   <button type="submit" class="vs-btn" aria-label="Subscribe to newsletter">
                     <span class="vs-btn__border"></span>
                     <i class="fa-solid fa-paper-plane"></i>
