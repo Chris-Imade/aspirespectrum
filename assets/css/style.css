@@ -5113,6 +5113,7 @@ a.text-theme:hover,
 /*------------------- 4.3. Footer  -------------------*/
 .vs-footer {
   overflow: hidden;
+  background-color: black !important;
 }
 .vs-footer__ele1,
 .vs-footer__ele2,
