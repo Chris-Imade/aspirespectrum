@@ -9831,6 +9831,9 @@ blockquote.vs-quote .quote-author {
     margin-top: calc(-1 * var(--vs-section-space-mobile));
     margin-bottom: 50px;
   }
+  .feedback-image--right {
+    width: 100% !important;
+  }
 }
 .feedback-image--right {
   position: absolute;
@@ -9841,6 +9844,7 @@ blockquote.vs-quote .quote-author {
   height: 100%;
   z-index: -1;
 }
+
 .feedback-block {
   display: inline-flex;
   gap: 62px;
