@@ -4243,7 +4243,7 @@ a.text-theme:hover,
 }
 /* Unified footer newsletter layout */
 .footer-newsletter { width: 100%; display: block; }
-.footer-newsletter .input-group { display: flex; gap: 12px; align-items: stretch; width: 100%; flex-wrap: nowrap; margin-bottom: 8px; }
+.footer-newsletter .input-group { display: flex; gap: 0px; align-items: stretch; width: 100%; flex-wrap: nowrap; margin-bottom: 8px; }
 .footer-newsletter .form-control {
   flex: 0 0 calc(80% - 12px);
   min-width: 0;
@@ -4265,9 +4265,8 @@ a.text-theme:hover,
 .footer-newsletter .vs-btn i { font-size: 18px; line-height: 1; }
 .footer-newsletter small { font-size: 12px; display: block; margin-top: 0; }
 @media (max-width: 575.98px) {
-  .footer-newsletter .input-group { flex-direction: column; gap: 10px; }
-  .footer-newsletter .vs-btn { width: 100%; flex-basis: auto; }
-  .footer-newsletter .form-control { width: 100%; flex-basis: auto; }
+  .footer-newsletter .vs-btn { width: 20%; flex-basis: auto; }
+  .footer-newsletter .form-control { width: 80%; flex-basis: auto; }
 }
 .sidebar-gallery {
   display: grid;
@@ -5113,7 +5112,14 @@ a.text-theme:hover,
 /*------------------- 4.3. Footer  -------------------*/
 .vs-footer {
   overflow: hidden;
-  background-color: black !important;
+  background-color: #8E3FAE !important;
+}
+
+.vs-footer > div > div > div > div > div > p, small {
+  color: white;
+}
+.vs-footer > div > div > div > div > div > input-group {
+  display: flex !important;
 }
 .vs-footer__ele1,
 .vs-footer__ele2,
@@ -5276,6 +5282,7 @@ a.text-theme:hover,
 }
 .vs-footer__bottom {
   padding: 29px 0;
+  background-color: #190a1f;
 }
 .vs-footer__bottom--menu {
   display: flex;

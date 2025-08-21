@@ -58,8 +58,7 @@
   <!-- Custom Styles -->
   <style>
     .vs-header__logo>a>.logo {
-      max-width: 230px;
-      height: 80px;
+      height: 110px;
     }
 
     /* Service image sizing: ensure images fill their parent */
@@ -169,6 +168,9 @@
       box-shadow: 0 6px 18px rgba(16, 24, 40, .08);
       overflow: hidden;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 420px;
       transition: transform .25s ease, box-shadow .25s ease;
     }
 
@@ -216,6 +218,18 @@
       font-size: 1.05rem;
       margin: 0 0 10px;
       color: #0f172a;
+    }
+
+    .offer-card__excerpt {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #475569;
+      margin: 0 0 14px;
+      display: -webkit-box;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .offer-card__cta {
@@ -278,7 +292,7 @@
 
     .footer-newsletter .input-group {
       display: flex;
-      gap: 12px;
+      /* gap: 12px; */
       align-items: stretch;
       width: 100%;
       flex-wrap: nowrap;
@@ -320,17 +334,16 @@
 
     @media (max-width: 575.98px) {
       .footer-newsletter .input-group {
-        flex-direction: column;
-        gap: 10px;
+        /* gap: 10px; */
       }
 
       .footer-newsletter .vs-btn {
-        width: 100%;
+        width: 20%;
         flex-basis: auto;
       }
 
       .footer-newsletter .form-control {
-        width: 100%;
+        width: 80%;
         flex-basis: auto;
       }
     }
@@ -669,6 +682,188 @@
       <div class="vs-balls vs-balls--screen" data-balls-bottom="-6px" data-balls-color="#f6f1e4"></div>
     </section>
     <!-- Hero End -->
+
+    <section class="vs-service--area animation-active z-index-common space overflow-hidden background-image"
+      style="background-image: url(&quot;assets/img/service/service-bg.png&quot;);">
+      <img src="assets/img/elements/service-ele-1.svg" alt="elements1"
+        class="vs-service--ele1 wow animate__fadeInLeft wow-animated" data-wow-delay="0.25s"
+        style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInLeft;">
+      <img src="assets/img/elements/service-ele-2.svg" alt="elements1"
+        class="vs-service--ele2 wow animate__fadeInRight wow-animated" data-wow-delay="0.45s"
+        style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInRight;">
+      <div class="container">
+        <div class="z-index-common">
+          <div
+            class="row justify-content-center swiper vs-carousel vs-carousel--service z-index-common pl-0 swiper-initialized swiper-horizontal swiper-backface-hidden"
+            data-xl="3" data-loop="true" data-autoplay-delay="6000" data-nav-next=".nav-next-2"
+            data-nav-prev=".nav-prev-1">
+            <div class="swiper-wrapper" id="swiper-wrapper-a106777df3fc2d2a5" aria-live="off"
+              style="transition-duration: 0ms; transform: translate3d(-416.667px, 0px, 0px); transition-delay: 0ms;">
+
+
+
+
+              <div class="col-lg-4 col-md-6 swiper-slide swiper-slide-prev" role="group" aria-label="2 / 4"
+                data-swiper-slide-index="1" style="width: 386.667px; margin-right: 30px;">
+                <div class="vs-service wow animate__fadeInUp wow-animated" data-wow-delay="0.35s"
+                  style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                  <div class="vs-service__figure">
+                    <a href="service-details.html" class="vs-service__image--link">
+                      <img class="vs-service__image" src="assets/img/custom/pre-offer/assessments.jpg" alt="vs service image">
+                    </a>
+                  </div>
+                  <div class="vs-service__content">
+                    <div class="vs-service__header">
+                      <span class="vs-service__icon">
+                        <img src="assets/img/icons/service-icon-1-2.svg" alt="service icon">
+                      </span>
+                    </div>
+                    <a class="vs-service__heading--link" href="service-details.html">
+                      <h3 class="vs-service__heading">Assessment & Observation</h3>
+                    </a>
+                    <a href="service-details.html" class="vs-service__link">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.39045 17.9495L17.6245 3.81022L11.9467 3.41092C11.6162 3.39253 11.307 3.24133 11.0897 2.99157C10.3795 2.16137 11.0268 0.887081 12.116 0.97149L20.7679 1.567C21.4447 1.61318 21.9555 2.20013 21.9077 2.87686L21.3019 11.5281C21.2154 13.1944 18.7024 13.0128 18.8562 11.3514L19.2524 5.64459L3.0003 19.7995C2.48691 20.2625 1.69228 20.2096 1.24372 19.6835C0.800172 19.1667 0.86807 18.3864 1.39045 17.9495Z"
+                          fill="currentColor"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 swiper-slide swiper-slide-active" role="group" aria-label="3 / 4"
+                data-swiper-slide-index="2" style="width: 386.667px; margin-right: 30px;">
+                <div class="vs-service wow animate__fadeInUp wow-animated" data-wow-delay="0.45s"
+                  style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInUp;">
+                  <div class="vs-service__figure">
+                    <a href="service-details.html" class="vs-service__image--link">
+                      <img class="vs-service__image" src="assets/img/custom/pre-offer/behavior-intervention.jpeg" alt="vs service image">
+                    </a>
+                  </div>
+                  <div class="vs-service__content">
+                    <div class="vs-service__header">
+                      <span class="vs-service__icon">
+                        <img src="assets/img/icons/service-icon-1-3.svg" alt="service icon">
+                      </span>
+                    </div>
+                    <a class="vs-service__heading--link" href="service-details.html">
+                      <h3 class="vs-service__heading">Behavior Intervention</h3>
+                    </a>
+                    <a href="service-details.html" class="vs-service__link">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.39045 17.9495L17.6245 3.81022L11.9467 3.41092C11.6162 3.39253 11.307 3.24133 11.0897 2.99157C10.3795 2.16137 11.0268 0.887081 12.116 0.97149L20.7679 1.567C21.4447 1.61318 21.9555 2.20013 21.9077 2.87686L21.3019 11.5281C21.2154 13.1944 18.7024 13.0128 18.8562 11.3514L19.2524 5.64459L3.0003 19.7995C2.48691 20.2625 1.69228 20.2096 1.24372 19.6835C0.800172 19.1667 0.86807 18.3864 1.39045 17.9495Z"
+                          fill="currentColor"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 swiper-slide swiper-slide-next" role="group" aria-label="4 / 4"
+                data-swiper-slide-index="3" style="width: 386.667px; margin-right: 30px;">
+                <div class="vs-service wow animate__fadeInUp wow-animated" data-wow-delay="0.55s"
+                  style="visibility: visible; animation-delay: 0.55s; animation-name: fadeInUp;">
+                  <div class="vs-service__figure">
+                    <a href="service-details.html" class="vs-service__image--link">
+                      <img class="vs-service__image" src="assets/img/custom/pre-offer/analysis.png" alt="vs service image">
+                    </a>
+                  </div>
+                  <div class="vs-service__content">
+                    <div class="vs-service__header">
+                      <span class="vs-service__icon">
+                        <img src="assets/img/icons/service-icon-1-3.svg" alt="service icon">
+                      </span>
+                    </div>
+                    <a class="vs-service__heading--link" href="service-details.html">
+                      <h3 class="vs-service__heading">Data Collection & Analysis</h3>
+                    </a>
+                    <a href="service-details.html" class="vs-service__link">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.39045 17.9495L17.6245 3.81022L11.9467 3.41092C11.6162 3.39253 11.307 3.24133 11.0897 2.99157C10.3795 2.16137 11.0268 0.887081 12.116 0.97149L20.7679 1.567C21.4447 1.61318 21.9555 2.20013 21.9077 2.87686L21.3019 11.5281C21.2154 13.1944 18.7024 13.0128 18.8562 11.3514L19.2524 5.64459L3.0003 19.7995C2.48691 20.2625 1.69228 20.2096 1.24372 19.6835C0.800172 19.1667 0.86807 18.3864 1.39045 17.9495Z"
+                          fill="currentColor"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 swiper-slide" role="group" aria-label="1 / 4" data-swiper-slide-index="0"
+                style="width: 386.667px; margin-right: 30px;">
+                <div class="vs-service wow animate__fadeInUp wow-animated" data-wow-delay="0.25s"
+                  style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
+                  <div class="vs-service__figure">
+                    <a href="service-details.html" class="vs-service__image--link">
+                      <img class="vs-service__image" src="assets/img/custom/pre-offer/assessments.jpg" alt="vs service image">
+                    </a>
+                  </div>
+                  <div class="vs-service__content">
+                    <div class="vs-service__header">
+                      <span class="vs-service__icon">
+                        <img src="assets/img/icons/service-icon-1-1.svg" alt="service icon">
+                      </span>
+                    </div>
+                    <a class="vs-service__heading--link" href="service-details.html">
+                      <h3 class="vs-service__heading">Assessment & Observation</h3>
+                    </a>
+                    <a href="service-details.html" class="vs-service__link">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.39045 17.9495L17.6245 3.81022L11.9467 3.41092C11.6162 3.39253 11.307 3.24133 11.0897 2.99157C10.3795 2.16137 11.0268 0.887081 12.116 0.97149L20.7679 1.567C21.4447 1.61318 21.9555 2.20013 21.9077 2.87686L21.3019 11.5281C21.2154 13.1944 18.7024 13.0128 18.8562 11.3514L19.2524 5.64459L3.0003 19.7995C2.48691 20.2625 1.69228 20.2096 1.24372 19.6835C0.800172 19.1667 0.86807 18.3864 1.39045 17.9495Z"
+                          fill="currentColor"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <div class="nav-prev-1" tabindex="0" role="button" aria-label="Previous slide"
+            aria-controls="swiper-wrapper-a106777df3fc2d2a5">
+            <svg width="57" height="20" viewBox="0 0 57 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_318_7638" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="57"
+                height="20">
+                <rect width="57" height="20" transform="matrix(-1 0 0 1 57 0)" fill="url(#pattern0_318_7638)"></rect>
+              </mask>
+              <g mask="url(#mask0_318_7638)">
+                <rect width="84" height="42" transform="matrix(-1 0 0 1 70 -14)" fill="currentColor"></rect>
+              </g>
+              <defs>
+                <pattern id="pattern0_318_7638" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_318_7638" transform="scale(0.0175439 0.05)"></use>
+                </pattern>
+                <image id="image0_318_7638" width="57" height="20" preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,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">
+                </image>
+              </defs>
+            </svg>
+          </div>
+          <div class="nav-next-2" tabindex="0" role="button" aria-label="Next slide"
+            aria-controls="swiper-wrapper-a106777df3fc2d2a5">
+            <svg width="57" height="20" viewBox="0 0 57 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_318_7635" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="57"
+                height="20">
+                <rect width="57" height="20" fill="url(#pattern0_318_7635)"></rect>
+              </mask>
+              <g mask="url(#mask0_318_7635)">
+                <rect x="-13" y="-14" width="84" height="42" fill="currentColor"></rect>
+              </g>
+              <defs>
+                <pattern id="pattern0_318_7635" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_318_7635" transform="scale(0.0175439 0.05)"></use>
+                </pattern>
+                <image id="image0_318_7635" width="57" height="20" preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,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">
+                </image>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Vs Service Area -->
     <!-- <section class="vs-service--area animation-active z-index-common space overflow-hidden"
       data-bg-src="assets/img/service/service-bg.png">
@@ -698,7 +893,8 @@
                 <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.25s">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="vs service image" />
+                      <img class="vs-service__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg"
+                        alt="vs service image" />
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -724,7 +920,8 @@
                 <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.35s">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg" alt="vs service image" />
+                      <img class="vs-service__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg"
+                        alt="vs service image" />
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -750,7 +947,8 @@
                 <div class="vs-service wow animate__fadeInUp" data-wow-delay="0.45s">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/custom/pexels-alex-green-5692640.jpg" alt="vs service image" />
+                      <img class="vs-service__image" src="assets/img/custom/pexels-alex-green-5692640.jpg"
+                        alt="vs service image" />
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -816,6 +1014,7 @@
       </div>
     </section> -->
     <!-- Vs Service Area End -->
+     
     <!-- What We Offer -->
     <section class="offer-section">
       <div class="container">
@@ -829,114 +1028,84 @@
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.1s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg"
+                <img class="offer-card__image" src="assets/img/custom/offer/digital.avif"
                   alt="Data Collection &amp; Analysis" />
                 <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22"
                     height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Data Collection &amp; Analysis</h3>
-                <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <h3 class="offer-card__title">Digital Learning Environment</h3>
+                <p class="offer-card__excerpt">The carefully designed Ausome Bee digital Learning Environment (LE) offers personalized, self-paced, adaptive training over mobile devices, to children with autism to develop their social, communication and adaptive or life skills.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.2s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-alex-green-5692640.jpg"
+                <img class="offer-card__image" src="assets/img/custom/offer/special-learning.jpg"
                   alt="Assessment &amp; Observation" />
                 <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22"
                     height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Assessment &amp; Observation</h3>
-                <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <h3 class="offer-card__title">Special Learning</h3>
+                <p class="offer-card__excerpt">Our vast array of social stories delivered using digital avatars, as well as probs and trainings help learners develop skills which can be used in real life.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.3s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8613094.jpg"
+                <img class="offer-card__image" src="assets/img/custom/offer/behavior-support.jpeg"
                   alt="Behavior Intervention Plan" />
                 <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22"
                     height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Behavior Intervention Plan</h3>
-                <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <h3 class="offer-card__title">Applied Behavior Analysis</h3>
+                <p class="offer-card__excerpt">Ausome Bee LE is developed on Applied Behavior Analysis (ABA) principles, and creates a personalized and interactive environment to support therapy and skills development for individuals with autism, or other learning challenges.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.4s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg"
+                <img class="offer-card__image" src="assets/img/custom/offer/innovative-tech.jpg"
                   alt="Parent Training &amp; Support" />
                 <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22"
                     height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Parent Training &amp; Support</h3>
-                <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <h3 class="offer-card__title">Innovative Technology</h3>
+                <p class="offer-card__excerpt">Ausome Bee LE utilizes innovative technology like Machine Learning (ML) models in Artificial Intelligence (AI) to achieve self-paced, adaptive learning for skills development of learners, and enhances the accuracy of individualized performance goals/milestones and achievements</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.5s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg"
+                <img class="offer-card__image" src="assets/img/custom/offer/community-connect.jpg"
                   alt="Skill Acquisition Programs" />
                 <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22"
                     height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Skill Acquisition Programs</h3>
-                <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <h3 class="offer-card__title">Community Connect</h3>
+                <p class="offer-card__excerpt">Our innovative community connects families to resources to enhance their capabilities to support each client’s unique needs and skills development. Our member-led community brings resources and support closer to families, aids interaction across other digital communities and unlock support to families through forums, blogs or local community events.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="offer-card wow animate__fadeInUp" data-wow-delay="0.6s">
               <div class="offer-card__media">
-                <img class="offer-card__image" src="assets/img/custom/pexels-yankrukov-8612971.jpg"
+                <img class="offer-card__image" src="assets/img/custom/offer/therapy-team.jpg"
                   alt="Therapist-Led Sessions" />
                 <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22"
                     height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Therapist-Led Sessions</h3>
-                <a class="offer-card__cta" href="services.html">Learn more
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+                <h3 class="offer-card__title">Dedicated Therapist Team</h3>
+                <p class="offer-card__excerpt">Interaction with dedicated therapists while getting high-quality training videos accessible through our innovative community delivers training on ABA principles to families to enhance the support to individuals with autism or other development challenges, and aid skills development. Immersed in our digital community, families are able to reinforce their learning through intra-community engagement.</p>
               </div>
             </div>
           </div>
@@ -946,7 +1115,7 @@
     <!-- Vs Session Time Area End -->
 
     <!-- Our Locations -->
-    <section class="vs-pro--area position-relative parallax-wrap" style="background-color: black !important;">
+    <section class="vs-pro--area position-relative parallax-wrap" style="background-color: #8E3FAE !important;">
       <div class="vs-pro--ele1 parallax-element" data-move="200">
         <img src="assets/img/pro/pro-ele-1.png" alt="pro-ele-1" />
       </div>
@@ -969,9 +1138,9 @@
               <p class="text-white mb-1">We currently serve cities and towns in these provinces of Canada.</p>
               <p class="text-white fw-bold vs-text-bolder">We're growing and adding new cities regularly.</p>
             </div>
-            <div class="row location-grid" style="display: flex; justify-content: center; align-items: center;">
+            <div class="row location-grid" style="display: flex; justify-content: center; align-items: flex-start;">
               <div class="col-sm-6 col-lg-4 mb-3">
-                <div class="location-card">
+                <div class="location-card" style="min-height: 200px;">
                   <div class="location-card__header">
                     <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
                     <h4 class="location-card__title">Ontario</h4>
@@ -989,7 +1158,7 @@
                 </div>
               </div>
               <div class="col-sm-6 col-lg-4 mb-3">
-                <div class="location-card">
+                <div class="location-card" style="min-height: 200px;">
                   <div class="location-card__header">
                     <span class="location-card__icon"><i class="fa-solid fa-location-dot"></i></span>
                     <h4 class="location-card__title">Alberta</h4>
@@ -1004,7 +1173,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- VS Locations End -->
     <!-- How It Works -->
     <section class="vs-class--area space-extra-top space-extra-bottom z-index-common overflow-hidden"
@@ -1162,12 +1331,13 @@
       </div>
     </section>
     <!-- Feature End -->
-    <!-- FAQ Feedback -->
+
+    <!-- Feedback -->
     <section class="bg-title z-index-common space overflow-hidden">
       <img src="assets/img/elements/sec-divider-ele1.svg" alt="sec-divider-ele1"
         class="sec-ele1 position-absolute start-0 end-0 bottom-0 z-index-n2" />
       <div class="feedback-image" data-bg-src="assets/img/feedback/feedback-image-1-1.jpg"></div>
-      <div style="background-color: black !important;" class="feedback-image--right"></div>
+      <div style="background-color: #8E3FAE !important;" class="feedback-image--right"></div>
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-lg-7">
