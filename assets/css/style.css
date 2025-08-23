@@ -3924,6 +3924,8 @@ a.text-theme:hover,
 
 .footer-logo {
   margin-bottom: 15px;
+  width: 216px;
+  height: 110px
 }
 
 .footer-text {

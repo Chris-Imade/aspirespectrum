@@ -201,19 +201,94 @@
 
   <!-- Footer -->
   <div class="vs-footer bg-title">
+    <div class="vs-footer__top z-index-common space-extra-top space-extra-bottom">
+      <img src="../assets/img/footer/footer-element-1.png" alt="Footer Element"
+        class="vs-footer__ele1 wow animate__fadeInLeft" data-wow-delay="0.25s" />
+      <img src="../assets/img/footer/footer-element-2.png" alt="Footer Element" class="vs-footer__ele2" />
+      <img src="../assets/img/footer/footer-element-3.png" alt="Footer Element"
+        class="vs-footer__ele3 wow animate__fadeInRight" data-wow-delay="0.35s" />
+      <div class="vs-balls vs-balls--screen" data-balls-top="-6px" data-balls-color="#ffffff"></div>
+      <div class="container">
+        <div class="row gy-4 gx-xxl-5">
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.25s">
+            <div class="vs-footer__widget">
+              <div class="vs-footer__logo text-center text-md-start mb-25">
+                <a href="index.html" class="vs-footer__logo-link">
+                  <img src="assets/img/logo-version-2.svg" alt="Aspire Spectrum Logo" width="216px" />
+                </a>
+              </div>
+              <p class="vs-footer__desc text-center text-md-start">
+                Empowering Individuals With Developmental Delays And Autism Through Compassionate ABA Therapy.
+              </p>
+              <div class="icon-call justify-content-center justify-content-md-start pt-10 mb-10">
+                <span class="icon-call__icon"><i class="fa-solid fa-phone-rotary"></i></span>
+                <div class="icon-call__content">
+                  <span class="icon-call__title">call support</span>
+                  <a href="tel:+18324893172" class="icon-call__number">+1 832-489-3172</a>
+                </div>
+              </div>
+              <div
+                class="social-style social-style--version2 w-100 justify-content-center justify-content-md-start pt-25">
+                <span class="social-style__label">follow us :</span>
+                <a target="_blank" href="https://facebook.com/ausomebee"><i class="fab fa-facebook-f"></i></a>
+                <a target="_blank" href="https://twitter.com/ausomebee"><i class="fa-brands fa-x-twitter"></i></a>
+                <a target="_blank" href="https://www.youtube.com/ausomebee"><i class="fab fa-youtube"></i></a>
+                <a target="_blank" href="https://instagram.com/ausomebee"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.35s">
+            <div class="vs-footer__widget">
+              <h3 class="vs-footer__title">Quick Links</h3>
+              <div class="vs-footer__menu">
+                <ul class="vs-footer__menu--list">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../about.html">About Us</a></li>
+                  <li><a href="../services.html">Our Services</a></li>
+                  <li><a href="../blog.html">Resources</a></li>
+                  <li><a href="../careers.html">Careers</a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="mt-30">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
+            <div class="vs-footer__widget">
+              <h3 class="vs-footer__title">Subscribe to our newsletter</h3>
+              <p class="mb-15">Get helpful resources, tips, and updates from Aspire Spectrum.</p>
+              <form class="footer-newsletter"
+                onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                <label for="footer-email-blog" class="visually-hidden">Email address</label>
+                <div class="input-group">
+                  <input id="footer-email-blog" type="email" class="form-control" placeholder="Your email" required />
+                  <button type="submit" class="vs-btn" aria-label="Subscribe to newsletter">
+                    <span class="vs-btn__border"></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+                <small class="d-block mt-2 opacity-75">We respect your privacy. Unsubscribe anytime.</small>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="vs-footer__bottom bg-theme-color-1">
       <div class="container">
         <div class="row gy-3 gx-5 align-items-center justify-content-center justify-content-lg-between">
           <div class="col-md-auto">
             <p class="vs-footer__copyright mb-0">
               Copyright © <span id="currentYear"></span>
-              <a href="index.html">Aspire Spectrum</a>. All rights reserved.
+              <a href="../index.html">Aspire Spectrum</a>. All rights reserved.
             </p>
           </div>
           <div class="col-md-auto">
             <ul class="vs-footer__bottom--menu">
-              <li><a href="terms.html">Terms & Conditions</a></li>
-              <li><a href="policy.html">Privacy Policy</a></li>
+              <li><a href="../terms.html">Terms & Conditions</a></li>
+              <li><a href="../policy.html">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
