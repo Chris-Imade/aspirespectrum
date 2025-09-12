@@ -190,13 +190,15 @@
 
     .offer-card__media {
       position: relative;
-      aspect-ratio: 16/10;
+      aspect-ratio: 16/9;
       background: var(--brand-tint-blue);
+      height: 280px;
+      overflow: hidden;
     }
 
     .offer-card__image {
       width: 100%;
-      height: 100%;
+      height: 280px;
       object-fit: cover;
       display: block;
     }
@@ -217,10 +219,9 @@
     }
 
     .offer-card__body {
-      padding: 18px 18px 20px;
+      padding: 14px 18px 16px;
       display: flex;
       flex-direction: column;
-      height: 100%;
     }
 
     .offer-card__title {
@@ -230,13 +231,13 @@
     }
 
     .offer-card__excerpt {
-      font-size: 0.95rem;
-      line-height: 1.55;
+      font-size: 0.9rem;
+      line-height: 1.4;
       color: #475569;
-      margin: 0 0 14px;
+      margin: 0 0 10px;
       display: -webkit-box;
-      line-clamp: 3;
-      -webkit-line-clamp: 3;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -451,7 +452,7 @@
         <div class="sidemenu-contact style2">
           <ul>
             <li>
-              <a href="tel:+18324893172" class="sidemenu-link">+1 832-489-3172</a>
+              <a href="tel:+18324893172" class="sidemenu-link">+1 437 494 7100</a>
             </li>
             <li>
               <a href="mailto:info@aspirespectrum.ca" class="sidemenu-link">info@aspirespectrum.com</a>
@@ -462,10 +463,10 @@
           </ul>
         </div>
         <div class="footer-social mb-20">
-          <a target="_blank" href="https://facebook.com/ausomebee"><i class="fab fa-facebook-f"></i></a>
-          <a target="_blank" href="https://twitter.com/ausomebee"><i class="fa-brands fa-x-twitter"></i></a>
-          <a target="_blank" href="https://www.youtube.com/ausomebee"><i class="fab fa-youtube"></i></a>
-          <a target="_blank" href="https://instagram.com/ausomebee"><i class="fab fa-instagram"></i></a>
+          <a target="_blank" href="https://facebook.com/aspirespectrum"><i class="fab fa-facebook-f"></i></a>
+          <a target="_blank" href="https://twitter.com/aspirespectrum"><i class="fa-brands fa-x-twitter"></i></a>
+          <a target="_blank" href="https://www.youtube.com/aspirespectrum"><i class="fab fa-youtube"></i></a>
+          <a target="_blank" href="https://instagram.com/aspirespectrum"><i class="fab fa-instagram"></i></a>
         </div>
         <p class="sidemenu-text sidemenu-text--footer text-center mb-0">
           Copyright © 2025
@@ -491,7 +492,7 @@
               <div class="vs-header__info">
                 <i class="fa-solid fa-phone-volume"></i>
                 <span>
-                  Phone : <a href="tel:+18324893172">+1 832-489-3172</a></span>
+                  Phone : <a href="tel:+18324893172">+1 437 494 7100</a></span>
               </div>
               <div class="vs-header__info">
                 <i class="fa-solid fa-clock-rotate-left"></i>
@@ -504,10 +505,10 @@
           <div class="col-lg-auto">
             <div class="social-style">
               <span class="social-style__label">follow us :</span>
-              <a target="_blank" href="https://facebook.com/ausomebee"><i class="fab fa-facebook-f"></i></a>
-              <a target="_blank" href="https://twitter.com/ausomebee"><i class="fa-brands fa-x-twitter"></i></a>
-              <a target="_blank" href="https://www.youtube.com/ausomebee"><i class="fab fa-youtube"></i></a>
-              <a target="_blank" href="https://instagram.com/ausomebee"><i class="fab fa-instagram"></i></a>
+              <a target="_blank" href="https://facebook.com/aspirespectrum"><i class="fab fa-facebook-f"></i></a>
+              <a target="_blank" href="https://twitter.com/aspirespectrum"><i class="fa-brands fa-x-twitter"></i></a>
+              <a target="_blank" href="https://www.youtube.com/aspirespectrum"><i class="fab fa-youtube"></i></a>
+              <a target="_blank" href="https://instagram.com/aspirespectrum"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -606,7 +607,7 @@
       <div class="swiper vs-hero__active--zoom">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/hero/banner-1-1.jpg"></div>
+            <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/carousel/slider-1.jpg"></div>
             <div class="container container--custom">
               <div class="vs-hero__content">
                 <div class="vs-hero__shape"
@@ -630,7 +631,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/hero/banner-1-2.jpeg"></div>
+            <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/carousel/slider-2.jpg"></div>
             <div class="container container--custom">
               <div class="vs-hero__content">
                 <div class="vs-hero__shape"
@@ -649,6 +650,28 @@
                   <a href="contact.html" class="vs-btn vs-hero__btn vs-hero__anim"><span
                       class="vs-btn__border"></span>Know More</a>
                   <!-- <img class="vs-hero__character vs-hero__anim" src="assets/img/hero/hero-character-1.png" alt="Hero Character" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="vs-hero__bg vs-hero__bg--zoom" data-bg-src="assets/img/carousel/slider-3.jpg"></div>
+            <div class="container container--custom">
+              <div class="vs-hero__content">
+                <div class="vs-hero__shape"
+                  style="background-color:rgba(255,255,255,0.9);border-radius:24px;display:inline-block;padding:24px 28px;max-width:600px;">
+                  <div class="vs-hero__shape--bg vs-hero__anim" style="display:none;"></div>
+                  <span class="vs-hero__title--sub vs-hero__anim">
+                    Personalized and Comprehensive Programs
+                  </span>
+                  <h1 class="vs-hero__title--main vs-hero__anim">
+                    Tailored <span>Solutions</span>
+                  </h1>
+                  <p class="vs-hero__desc vs-hero__anim">
+                    Our programs are designed to foster growth, independence, and happiness for individuals, while supporting and empowering their families every step of the way.
+                  </p>
+                  <a href="contact.html" class="vs-btn vs-hero__btn vs-hero__anim"><span
+                      class="vs-btn__border"></span>Learn More</a>
                 </div>
               </div>
             </div>
@@ -710,11 +733,12 @@
                   style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInUp;">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/custom/pre-offer/behavior-intervention.jpeg" alt="vs service image">
+                      <img class="vs-service__image" src="assets/img/custom/pre-offer/behavior-intervention.jpeg"
+                        alt="vs service image">
                     </a>
                   </div>
                   <div class="vs-service__content">
-                    
+
                     <a class="vs-service__heading--link" href="services.html">
                       <h3 class="vs-service__heading">Behavior <br> Intervention Plan</h3>
                     </a>
@@ -733,7 +757,8 @@
                   style="visibility: visible; animation-delay: 0.55s; animation-name: fadeInUp;">
                   <div class="vs-service__figure">
                     <a href="services.html" class="vs-service__image--link">
-                      <img class="vs-service__image" src="assets/img/custom/pre-offer/analysis.png" alt="vs service image">
+                      <img class="vs-service__image" src="assets/img/custom/pre-offer/analysis.png"
+                        alt="vs service image">
                     </a>
                   </div>
                   <div class="vs-service__content">
@@ -906,7 +931,7 @@
       </div>
     </section> -->
     <!-- Vs Service Area End -->
-     
+
     <!-- What We Offer -->
     <section class="offer-section">
       <div class="container">
@@ -922,12 +947,10 @@
               <div class="offer-card__media">
                 <img class="offer-card__image" src="assets/img/custom/offer/digital.avif"
                   alt="Data Collection &amp; Analysis" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22"
-                    height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Digital Learning Environment</h3>
-                <p class="offer-card__excerpt">The carefully designed Ausome Bee digital Learning Environment (LE) offers personalized, self-paced, adaptive training over mobile devices, to children with autism to develop their social, communication and adaptive or life skills.</p>
+                <h3 class="offer-card__title">Comprehensive Assessment & Evaluation</h3>
+                <p class="offer-card__excerpt">AspireSpectrum provides thorough behavioral assessments and functional behavior analyses to understand each individual's unique needs, strengths, and challenges, creating a foundation for personalized treatment plans.</p>
               </div>
             </div>
           </div>
@@ -936,12 +959,10 @@
               <div class="offer-card__media">
                 <img class="offer-card__image" src="assets/img/custom/offer/special-learning.jpg"
                   alt="Assessment &amp; Observation" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22"
-                    height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Special Learning</h3>
-                <p class="offer-card__excerpt">Our vast array of social stories delivered using digital avatars, as well as probs and trainings help learners develop skills which can be used in real life.</p>
+                <h3 class="offer-card__title">Individualized Behavior Intervention</h3>
+                <p class="offer-card__excerpt">AspireSpectrum develops customized behavior intervention plans using evidence-based ABA strategies to address challenging behaviors while promoting positive skill development and independence.</p>
               </div>
             </div>
           </div>
@@ -950,12 +971,10 @@
               <div class="offer-card__media">
                 <img class="offer-card__image" src="assets/img/custom/offer/behavior-support.jpeg"
                   alt="Behavior Intervention Plan" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22"
-                    height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Applied Behavior Analysis</h3>
-                <p class="offer-card__excerpt">Ausome Bee LE is developed on Applied Behavior Analysis (ABA) principles, and creates a personalized and interactive environment to support therapy and skills development for individuals with autism, or other learning challenges.</p>
+                <h3 class="offer-card__title">Social Skills Development</h3>
+                <p class="offer-card__excerpt">AspireSpectrum offers structured social skills training programs that help individuals learn appropriate social interactions, communication techniques, and relationship-building skills in natural environments.</p>
               </div>
             </div>
           </div>
@@ -964,12 +983,10 @@
               <div class="offer-card__media">
                 <img class="offer-card__image" src="assets/img/custom/offer/innovative-tech.jpg"
                   alt="Parent Training &amp; Support" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-1.svg" alt="icon" width="22"
-                    height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Innovative Technology</h3>
-                <p class="offer-card__excerpt">Ausome Bee LE utilizes innovative technology like Machine Learning (ML) models in Artificial Intelligence (AI) to achieve self-paced, adaptive learning for skills development of learners, and enhances the accuracy of individualized performance goals/milestones and achievements</p>
+                <h3 class="offer-card__title">Early Intervention Services</h3>
+                <p class="offer-card__excerpt">AspireSpectrum provides specialized early intervention programs for young children, focusing on critical developmental milestones and building foundational skills during the most crucial learning years.</p>
               </div>
             </div>
           </div>
@@ -978,12 +995,10 @@
               <div class="offer-card__media">
                 <img class="offer-card__image" src="assets/img/custom/offer/community-connect.jpg"
                   alt="Skill Acquisition Programs" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-2.svg" alt="icon" width="22"
-                    height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Community Connect</h3>
-                <p class="offer-card__excerpt">Our innovative community connects families to resources to enhance their capabilities to support each client’s unique needs and skills development. Our member-led community brings resources and support closer to families, aids interaction across other digital communities and unlock support to families through forums, blogs or local community events.</p>
+                <h3 class="offer-card__title">Family Training & Support</h3>
+                <p class="offer-card__excerpt">AspireSpectrum empowers families through comprehensive training programs, teaching parents and caregivers effective ABA techniques and strategies to support their loved ones' progress at home and in the community.</p>
               </div>
             </div>
           </div>
@@ -992,12 +1007,10 @@
               <div class="offer-card__media">
                 <img class="offer-card__image" src="assets/img/custom/offer/therapy-team.jpg"
                   alt="Therapist-Led Sessions" />
-                <span class="offer-card__icon"><img src="assets/img/icons/service-icon-1-3.svg" alt="icon" width="22"
-                    height="22"></span>
               </div>
               <div class="offer-card__body">
-                <h3 class="offer-card__title">Dedicated Therapist Team</h3>
-                <p class="offer-card__excerpt">Interaction with dedicated therapists while getting high-quality training videos accessible through our innovative community delivers training on ABA principles to families to enhance the support to individuals with autism or other development challenges, and aid skills development. Immersed in our digital community, families are able to reinforce their learning through intra-community engagement.</p>
+                <h3 class="offer-card__title">Life Skills & Independence Training</h3>
+                <p class="offer-card__excerpt">AspireSpectrum focuses on developing essential daily living skills, vocational readiness, and independence training to help individuals achieve their highest potential and successfully transition into adulthood.</p>
               </div>
             </div>
           </div>
@@ -1387,22 +1400,22 @@
                             <a href="javascript:void(0)"><i class="fa-solid fa-share-nodes"></i></a>
                             <ul>
                               <li>
-                                <a href="https://facebook.com/ausomebee" target="_blank">
+                                <a href="https://facebook.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://twitter.com/ausomebee" target="_blank">
+                                <a href="https://twitter.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-x-twitter"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://instagram.com/ausomebee" target="_blank">
+                                <a href="https://instagram.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-instagram"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.youtube.com/ausomebee" target="_blank">
+                                <a href="https://www.youtube.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-youtube"></i>
                                 </a>
                               </li>
@@ -1452,22 +1465,22 @@
                             <a href="javascript:void(0)"><i class="fa-solid fa-share-nodes"></i></a>
                             <ul>
                               <li>
-                                <a href="https://facebook.com/ausomebee" target="_blank">
+                                <a href="https://facebook.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://twitter.com/ausomebee" target="_blank">
+                                <a href="https://twitter.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-x-twitter"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://instagram.com/ausomebee" target="_blank">
+                                <a href="https://instagram.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-instagram"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.youtube.com/ausomebee" target="_blank">
+                                <a href="https://www.youtube.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-youtube"></i>
                                 </a>
                               </li>
@@ -1486,8 +1499,7 @@
                   <div class="vs-blog__img">
                     <a href="posts/picture-books-therapists-can-use-to-promote.html">
 
-                      <img style="max-height: 220px; object-fit: cover;"
-                        src="assets/img/custom/asian/indian.jpg"
+                      <img style="max-height: 220px; object-fit: cover;" src="assets/img/custom/asian/indian.jpg"
                         alt="Picture Books Therapists Can Use to Promote" loading="lazy" />
                     </a>
                   </div>
@@ -1518,22 +1530,22 @@
                             <a href="javascript:void(0)"><i class="fa-solid fa-share-nodes"></i></a>
                             <ul>
                               <li>
-                                <a href="https://facebook.com/ausomebee" target="_blank">
+                                <a href="https://facebook.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://twitter.com/ausomebee" target="_blank">
+                                <a href="https://twitter.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-x-twitter"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://instagram.com/ausomebee" target="_blank">
+                                <a href="https://instagram.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-instagram"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.youtube.com/ausomebee" target="_blank">
+                                <a href="https://www.youtube.com/aspirespectrum" target="_blank">
                                   <i class="fa-brands fa-youtube"></i>
                                 </a>
                               </li>
@@ -1576,16 +1588,16 @@
                 <span class="icon-call__icon"><i class="fa-solid fa-phone-rotary"></i></span>
                 <div class="icon-call__content">
                   <span class="icon-call__title">call support</span>
-                  <a href="tel:+1344688955" class="icon-call__number">+1 832-489-3172</a>
+                  <a href="tel:+1344688955" class="icon-call__number">+1 437 494 7100</a>
                 </div>
               </div>
               <div
                 class="social-style social-style--version2 w-100 justify-content-center justify-content-md-start pt-25">
                 <span class="social-style__label">follow us :</span>
-                <a target="_blank" href="https://facebook.com/ausomebee"><i class="fab fa-facebook-f"></i></a>
-                <a target="_blank" href="https://twitter.com/ausomebee"><i class="fa-brands fa-x-twitter"></i></a>
-                <a target="_blank" href="https://www.youtube.com/ausomebee"><i class="fab fa-youtube"></i></a>
-                <a target="_blank" href="https://instagram.com/ausomebee"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://facebook.com/aspirespectrum"><i class="fab fa-facebook-f"></i></a>
+                <a target="_blank" href="https://twitter.com/aspirespectrum"><i class="fa-brands fa-x-twitter"></i></a>
+                <a target="_blank" href="https://www.youtube.com/aspirespectrum"><i class="fab fa-youtube"></i></a>
+                <a target="_blank" href="https://instagram.com/aspirespectrum"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -1685,23 +1697,93 @@
   <script src="assets/js/swiper-bundle.js"></script>
   <!-- Main Js File -->
   <script src="assets/js/main.js"></script>
-  
+
   <!-- Offer Modal Styles & Markup -->
   <style>
-    .offer-modal { position: fixed; inset: 0; z-index: 1090; display: none; }
-    .offer-modal.is-open { display: block; }
-    .offer-modal__overlay { position: absolute; inset: 0; background: rgba(16,24,40,.6); backdrop-filter: blur(2px); }
-    .offer-modal__dialog { position: relative; z-index: 1; max-width: 920px; margin: 40px auto; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(16,24,40,.25); }
-    .offer-modal__close { position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(16,24,40,.6); color: #fff; font-size: 28px; line-height: 40px; text-align: center; cursor: pointer; z-index: 2; }
-    .offer-modal__media img { display: block; width: 100%; height: 360px; object-fit: cover; }
-    .offer-modal__body { padding: 20px 22px 24px; }
-    .offer-modal__body h3 { margin: 0 0 10px; font-size: 1.5rem; }
-    .offer-modal__body p { margin: 0 0 12px; color: #475467; }
-    body.offer-modal-open { overflow: hidden; }
+    .offer-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1090;
+      display: none;
+    }
+
+    .offer-modal.is-open {
+      display: block;
+    }
+
+    .offer-modal__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(16, 24, 40, .6);
+      backdrop-filter: blur(2px);
+    }
+
+    .offer-modal__dialog {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(16, 24, 40, .25);
+    }
+
+    .offer-modal__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(16, 24, 40, .6);
+      color: #fff;
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .offer-modal__media img {
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .offer-modal__body {
+      padding: 20px 22px 24px;
+    }
+
+    .offer-modal__body h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .offer-modal__body p {
+      margin: 0 0 12px;
+      color: #475467;
+    }
+
+    body.offer-modal-open {
+      overflow: hidden;
+    }
+
     @media (max-width: 575.98px) {
-      .offer-modal__dialog { margin: 16px; border-radius: 12px; }
-      .offer-modal__media img { height: 220px; }
-      .offer-modal__close { background: rgba(16,24,40,.75); }
+      .offer-modal__dialog {
+        margin: 16px;
+        border-radius: 12px;
+      }
+
+      .offer-modal__media img {
+        height: 220px;
+      }
+
+      .offer-modal__close {
+        background: rgba(16, 24, 40, .75);
+      }
     }
   </style>
 
