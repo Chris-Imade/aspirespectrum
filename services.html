@@ -56,48 +56,53 @@
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    /* Horizontal Service Cards */
-    .service-card {
-      display: flex;
-      gap: 20px;
+    /* 3x3 Grid Service Cards */
+    .vs-service-card {
       background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 6px 18px rgba(16, 24, 40, .06);
-      transition: transform .25s ease, box-shadow .25s ease;
-      min-height: 260px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
-    .service-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 28px rgba(16, 24, 40, .12);
+    .vs-service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
-    .service-card__media {
-      flex: 0 0 320px;
-      background: var(--brand-tint-blue);
+    .vs-service-card__img {
       position: relative;
-      height: 260px;
+      overflow: hidden;
+      padding-top: 66.67%; /* 3:2 aspect ratio */
     }
 
-    .service-card__image {
+    .vs-service-card__img img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      transition: transform 0.5s ease;
     }
 
-    .service-card__body {
-      padding: 18px 18px 18px 0;
+    .vs-service-card:hover .vs-service-card__img img {
+      transform: scale(1.05);
+    }
+
+    .vs-service-card__content {
+      padding: 24px;
+      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
 
-    .service-card__title {
-      margin: 0 0 8px;
-      font-size: 1.35rem;
+    .vs-service-card__title {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
       color: #0f172a;
     }
 
@@ -380,21 +385,17 @@
         Header layout 2
     ==============================-->
   <!-- Breadcrumb -->
-  <div class="breadcrumb-wrapper z-index-common overflow-hidden">
+  <div class="breadcrumb-wrapper z-index-common overflow-hidden" style="background-color: #7FC780;">
     <div class="vs-balls vs-balls--screen" data-balls-bottom="-6px" data-balls-color="#ffffff"></div>
-    <div class="breadcrumb-wrapper__bg wow animate__fadeInUp" data-wow-delay="0.15s" data-vs-gsap-parallax-speed="2"
-      data-vs-gsap-parallax-zoom="true">
-      <img src="assets/img/custom/2k-services.jpeg" style="background-position: top;" alt="session bg" />
-    </div>
     <div class="container">
       <div class="breadcrumb-wrapper__content wow animate__fadeInUp" data-wow-delay="0.45s">
-        <h1 class="breadcrumb-wrapper__title">Services</h1>
+        <h1 class="breadcrumb-wrapper__title" style="color: #ffffff;">Services</h1>
         <div class="breadcrumb-wrapper__menu--wrap">
           <ul class="breadcrumb-wrapper__menu">
             <li class="breadcrumb-wrapper__menu--item">
-              <a href="index.html">Home</a>
+              <a href="index.html" style="color: #ffffff;">Home</a>
             </li>
-            <li class="breadcrumb-wrapper__menu--item">Services</li>
+            <li class="breadcrumb-wrapper__menu--item" style="color: rgba(255, 255, 255, 0.8);">Services</li>
           </ul>
         </div>
       </div>
@@ -404,156 +405,184 @@
   <!--==============================
     Service Area
     ==============================-->
-  <section class="space">
+  <section class="space" style="padding: 80px 0;">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="row gy-4">
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-kseniachernaya-8535183.jpg"
-                    alt="Assessment" />
+        <div class="col-12">
+          <div class="row g-4">
+            <!-- Assessment -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/assessment.html">
+                    <img src="assets/img/custom/pexels-kseniachernaya-8535183.jpg" alt="Assessment" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit" href="services/assessment.html">Assessment</a>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/assessment.html">Assessment</a>
                   </h3>
                   <p class="service-card__desc">We offer comprehensive ABA-based assessments to understand unique
                     behavioral challenges and develop personalized treatment plans to promote positive change.</p>
-                  <div class="service-card__cta"><a class="vs-btn" href="services/assessment.html"><span
-                        class="vs-btn__border"></span>View details</a></div>
+                  <div class="mt-auto">
+                    <a href="services/assessment.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-yankrukov-8612971.jpg"
-                    alt="Autism & Behavioral Services" />
+            <!-- Autism & Behavioral Services -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/autism-and-behavioral-services.html">
+                    <img src="assets/img/custom/pexels-yankrukov-8612971.jpg" alt="Autism & Behavioral Services" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit"
-                      href="services/autism-and-behavioral-services.html">Autism & Behavioral Services</a></h3>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/autism-and-behavioral-services.html">Autism & Behavioral Services</a>
+                  </h3>
                   <p class="service-card__desc">Data-driven behavioral interventions tailored to each individual,
                     leveraging home and community environments and collaborating effectively with families.</p>
-                  <div class="service-card__cta"><a class="vs-btn"
-                      href="services/autism-and-behavioral-services.html"><span class="vs-btn__border"></span>View
-                      details</a></div>
+                  <div class="mt-auto">
+                    <a href="services/autism-and-behavioral-services.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-kseniachernaya-8535163.jpg"
-                    alt="Early Intervention" />
+            <!-- Early Intervention -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/early-intervention.html">
+                    <img src="assets/img/custom/pexels-kseniachernaya-8535163.jpg" alt="Early Intervention" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit" href="services/early-intervention.html">Early
-                      Intervention</a></h3>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/early-intervention.html">Early Intervention</a>
+                  </h3>
                   <p class="service-card__desc">Evidence-based early intervention using naturalistic teaching with
                     strategies from ESDM and PRT, focused on holistic development and family-centered care.</p>
-                  <div class="service-card__cta"><a class="vs-btn" href="services/early-intervention.html"><span
-                        class="vs-btn__border"></span>View details</a></div>
+                  <div class="mt-auto">
+                    <a href="services/early-intervention.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg"
-                    alt="Daily Living or Adaptive Skills" />
+            <!-- Daily Living or Adaptive Skills -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/daily-living-adaptive-skills.html">
+                    <img src="assets/img/custom/pexels-ketut-subiyanto-4933602.jpg" alt="Daily Living or Adaptive Skills" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit"
-                      href="services/daily-living-adaptive-skills.html">Daily Living or Adaptive Skills</a></h3>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/daily-living-adaptive-skills.html">Daily Living & Adaptive Skills</a>
+                  </h3>
                   <p class="service-card__desc">Programs that build essential adaptive skills, foster independence, and
                     improve quality of life through tailored ABA interventions.</p>
-                  <div class="service-card__cta"><a class="vs-btn"
-                      href="services/daily-living-adaptive-skills.html"><span class="vs-btn__border"></span>View
-                      details</a></div>
+                  <div class="mt-auto">
+                    <a href="services/daily-living-adaptive-skills.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg"
-                    alt="Social Skills" />
+            <!-- Social Skills -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/social-skills.html">
+                    <img src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg" alt="Social Skills" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit" href="services/social-skills.html">Social
-                      Skills</a></h3>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/social-skills.html">Social Skills</a>
+                  </h3>
                   <p class="service-card__desc">Targeted interventions that build social competence, meaningful
-                    connections, and positive interactions.</p>
-                  <div class="service-card__cta"><a class="vs-btn" href="services/social-skills.html"><span
-                        class="vs-btn__border"></span>View details</a></div>
+                    connections, and positive interactions in various social settings.</p>
+                  <div class="mt-auto">
+                    <a href="services/social-skills.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-yankrukov-8613094.jpg"
-                    alt="Functional Communication Training" />
+            <!-- Functional Communication Training -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/functional-communication-training.html">
+                    <img src="assets/img/custom/pexels-yankrukov-8613094.jpg" alt="Functional Communication Training" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit"
-                      href="services/functional-communication-training.html">Functional Communication Training</a></h3>
-                  <p class="service-card__desc">Teaching functional alternatives to challenging behavior by building
-                    effective communication skills.</p>
-                  <div class="service-card__cta"><a class="vs-btn"
-                      href="services/functional-communication-training.html"><span class="vs-btn__border"></span>View
-                      details</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467262.jpg"
-                    alt="Expressive & Receptive Language" />
-                </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit"
-                      href="services/expressive-receptive-language.html">Expressive & Receptive Language</a></h3>
-                  <p class="service-card__desc">Personalized strategies to develop expressive and receptive language for
-                    effective communication and comprehension.</p>
-                  <div class="service-card__cta"><a class="vs-btn"
-                      href="services/expressive-receptive-language.html"><span class="vs-btn__border"></span>View
-                      details</a></div>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/functional-communication-training.html">Functional Communication Training</a>
+                  </h3>
+                  <p class="service-card__desc">Teaching functional alternatives to challenging behavior by building effective communication skills.</p>
+                  <div class="mt-auto">
+                    <a href="services/functional-communication-training.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg"
-                    alt="Verbal Communication" />
+            <!-- Expressive & Receptive Language -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/expressive-receptive-language.html">
+                    <img src="assets/img/custom/pexels-anastasia-shuraeva-8467262.jpg" alt="Expressive & Receptive Language" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit"
-                      href="services/verbal-communication.html">Verbal Communication</a></h3>
-                  <p class="service-card__desc">Interventions that facilitate verbal expression and confidence for
-                    clear, effective communication.</p>
-                  <div class="service-card__cta"><a class="vs-btn" href="services/verbal-communication.html"><span
-                        class="vs-btn__border"></span>View details</a></div>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/expressive-receptive-language.html">Expressive & Receptive Language</a>
+                  </h3>
+                  <p class="service-card__desc">Personalized strategies to develop expressive and receptive language for effective communication and comprehension.</p>
+                  <div class="mt-auto">
+                    <a href="services/expressive-receptive-language.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="service-card">
-                <div class="service-card__media">
-                  <img class="service-card__image" src="assets/img/custom/pexels-jep-gambardella-6222768.jpg"
-                    alt="Evidence-based Therapy" />
+            <!-- Verbal Communication -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/verbal-communication.html">
+                    <img src="assets/img/custom/pexels-anastasia-shuraeva-8467279.jpg" alt="Verbal Communication" class="w-100">
+                  </a>
                 </div>
-                <div class="service-card__body">
-                  <h3 class="service-card__title"><a class="text-inherit"
-                      href="services/evidence-based-therapy.html">Evidence-based Therapy</a></h3>
-                  <p class="service-card__desc">In-home, community, or remote ABA therapy delivered by trained
-                    professionals to meet individualized behavior plan goals.</p>
-                  <div class="service-card__cta"><a class="vs-btn" href="services/evidence-based-therapy.html"><span
-                        class="vs-btn__border"></span>View details</a></div>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/verbal-communication.html">Verbal Communication</a>
+                  </h3>
+                  <p class="service-card__desc">Interventions that facilitate verbal expression and confidence for clear, effective communication.</p>
+                  <div class="mt-auto">
+                    <a href="services/verbal-communication.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Evidence-based Therapy -->
+            <div class="col-lg-4 col-md-6">
+              <div class="vs-service-card h-100">
+                <div class="vs-service-card__img">
+                  <a href="services/evidence-based-therapy.html">
+                    <img src="assets/img/custom/pexels-jep-gambardella-6222768.jpg" alt="Evidence-based Therapy" class="w-100">
+                  </a>
+                </div>
+                <div class="vs-service-card__content">
+                  <h3 class="h4 vs-service-card__title">
+                    <a href="services/evidence-based-therapy.html">Evidence-based Therapy</a>
+                  </h3>
+                  <p class="service-card__desc">In-home, community, or remote ABA therapy delivered by trained professionals to meet individualized behavior plan goals.</p>
+                  <div class="mt-auto">
+                    <a href="services/evidence-based-therapy.html" class="vs-btn vs-btn--sm"><span class="vs-btn__border"></span>View details</a>
+                  </div>
                 </div>
               </div>
             </div>
