@@ -42,78 +42,109 @@
   <link rel="stylesheet" href="assets/css/animate.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    /* Scoped blog listing styles */
+    /* Blog page styles */
     .vs-header__logo>a>.logo {
       height: 110px;
     }
 
-    .blog-grid .offer-card {
-      border-radius: 16px;
-      overflow: hidden;
+    /* Blog cards */
+    .blog-grid .vs-blog {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
       background: #fff;
-      box-shadow: 0 6px 18px rgba(16, 24, 40, .08);
-      transition: transform .25s ease, box-shadow .25s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .blog-grid .vs-blog:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-grid .vs-blog__inner {
+      display: flex;
+      flex-direction: column;
       height: 100%;
     }
 
-    .blog-grid .offer-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(16, 24, 40, .12);
-    }
-
-    .blog-grid .offer-card__media {
+    .blog-grid .vs-blog__img {
       position: relative;
-      aspect-ratio: 16/10;
-      background: var(--brand-tint-blue);
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
     }
 
-    .blog-grid .offer-card__image {
+    .blog-grid .vs-blog__img img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      transition: transform 0.5s ease;
     }
 
-    .blog-grid .offer-card__body {
-      padding: 16px 16px 18px;
+    .blog-grid .vs-blog:hover .vs-blog__img img {
+      transform: scale(1.05);
     }
 
-    .blog-grid .offer-card__title {
-      font-size: 1.05rem;
-      margin: 0 0 8px;
-      color: #0f172a;
-    }
-
-    .blog-grid .offer-card__meta {
+    .blog-grid .vs-blog__content {
+      padding: 24px;
+      flex: 1;
       display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: .85rem;
-      color: #64748b;
-      margin-bottom: 8px;
+      flex-direction: column;
     }
 
-    .blog-grid .offer-card__excerpt {
-      color: #475569;
-      font-size: .95rem;
-      line-height: 1.55;
-      margin-bottom: 10px;
+    .blog-grid .vs-blog__title {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      line-height: 1.4;
     }
 
-    .blog-grid .offer-card__cta {
+    .blog-grid .vs-blog__title a {
+      color: #1a1a1a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .blog-grid .vs-blog__title a:hover {
+      color: #7FC780;
+    }
+
+    .blog-grid .vs-blog__meta {
+      margin-bottom: 12px;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    .blog-grid .vs-blog__desc {
+      margin-bottom: 20px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .blog-grid .vs-blog__link {
+      margin-top: auto;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      color: var(--brand-keppel);
-      text-decoration: none;
+      color: #7FC780;
       font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    .blog-grid .offer-card__cta svg {
-      transition: transform .2s ease;
+    .blog-grid .vs-blog__link:hover {
+      color: #5a9e5c;
     }
 
-    .blog-grid .offer-card__cta:hover svg {
+    .blog-grid .vs-blog__link i {
+      margin-left: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-grid .vs-blog__link:hover i {
       transform: translateX(4px);
     }
   </style>
@@ -348,17 +379,17 @@
   </header>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb-wrapper z-index-common overflow-hidden">
-    <div class="breadcrumb-wrapper__bg" data-vs-gsap-parallax-speed="2" data-vs-gsap-parallax-zoom>
-      <img src="assets/img/custom/blog-2k.jpg" alt="breadcrumb" />
-    </div>
-    <div class="container">
-      <div class="breadcrumb-wrapper__content">
-        <h1 class="breadcrumb-wrapper__title">Resources & Blog</h1>
+  <div class="breadcrumb-wrapper z-index-common overflow-hidden" style="background-image: url('assets/img/custom/replacements/services/servicess-header-img.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="breadcrumb-wrapper__overlay" style="background: rgba(127, 199, 128, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+    <div class="container" style="position: relative; z-index: 3;">
+      <div class="breadcrumb-wrapper__content wow animate__fadeInUp" data-wow-delay="0.45s">
+        <h1 class="breadcrumb-wrapper__title" style="color: #ffffff;">Resources & Blog</h1>
         <div class="breadcrumb-wrapper__menu--wrap">
           <ul class="breadcrumb-wrapper__menu">
-            <li class="breadcrumb-wrapper__menu--item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-wrapper__menu--item">Resources</li>
+            <li class="breadcrumb-wrapper__menu--item">
+              <a href="index.html" style="color: #ffffff;">Home</a>
+            </li>
+            <li class="breadcrumb-wrapper__menu--item" style="color: rgba(255, 255, 255, 0.8);">Resources</li>
           </ul>
         </div>
       </div>

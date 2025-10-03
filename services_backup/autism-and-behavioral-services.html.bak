@@ -4,10 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Resource Guide for Speech Therapists | Aspire Spectrum</title>
-  <meta name="author" content="Aspire Spectrum" />
-  <meta name="description"
-    content="A practical resource guide for speech-language pathologists and families: tools, activities, and evidence-based strategies that support communication growth." />
+  <title>Autism & Behavioral Services | Aspire Spectrum Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicons/apple-icon-57x57.png" />
@@ -41,15 +38,38 @@
   <link rel="stylesheet" href="../assets/css/animate.min.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <style>
-    /* Scoped blog listing styles */
     .vs-header__logo>a>.logo {
       height: 110px;
+    }
+
+    .service-hero {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(16, 24, 40, .12)
+    }
+
+    .service-hero img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block
+    }
+
+    @media (max-width: 991.98px) {
+      .service-hero img {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .service-hero img {
+        height: 220px;
+      }
     }
   </style>
 </head>
 
 <body>
-
   <!-- Mobile navigation -->
   <div class="vs-menu-wrapper">
     <div class="vs-menu-area text-center">
@@ -270,74 +290,61 @@
   </header>
 
   <div class="breadcrumb-wrapper z-index-common overflow-hidden">
-    <div class="breadcrumb-wrapper__bg" data-vs-gsap-parallax-speed="2" data-vs-gsap-parallax-zoom>
-      <img src="../assets/img/custom/replacements/services/servicess-header-img.jpeg" alt="breadcrumb" />
-    </div>
-    <div class="breadcrumb-wrapper__overlay" style="background: rgba(127, 199, 128, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
-    <div class="container" style="position: relative; z-index: 3;">
+    <div class="breadcrumb-wrapper__bg"><img src="../assets/img/bg/breadcrumb-bg-3.jpg" alt="breadcrumb" /></div>
+    <div class="container">
       <div class="breadcrumb-wrapper__content">
-        <h1 class="breadcrumb-wrapper__title">Resource Guide for Speech Therapists</h1>
+        <h1 class="breadcrumb-wrapper__title">Autism & Behavioral Services</h1>
         <div class="breadcrumb-wrapper__menu--wrap">
           <ul class="breadcrumb-wrapper__menu">
             <li class="breadcrumb-wrapper__menu--item"><a href="../index.html">Home</a></li>
-            <li class="breadcrumb-wrapper__menu--item"><a href="../blog.html">Resources</a></li>
-            <li class="breadcrumb-wrapper__menu--item">Article</li>
+            <li class="breadcrumb-wrapper__menu--item"><a href="../services.html">Services</a></li>
+            <li class="breadcrumb-wrapper__menu--item">Autism & Behavioral Services</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
-  <section class="space space-extra-bottom z-index-common overflow-hidden post-detail">
+  <section class="space space-extra-bottom">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="post-hero">
-            <img class="w-100" src="../assets/img/custom/pexels-vlada-karpovich-7356477.jpg"
-              alt="Resource guide for speech therapists" />
+      <div class="row justify-content-center gx-xxl-5">
+        <div class="col-lg-8">
+          <div class="service-hero mb-20"><img src="../assets/img/custom/pexels-yankrukov-8612971.jpg"
+              alt="Autism & Behavioral Services" /></div>
+          <div class="vs-text">
+            <h3>Tailored ABA for Meaningful Change</h3>
+            <p>We aim to enhance the opportunities to tailor data-driven behavioral interventions to meet the unique
+              needs and preferences of each individual with behavioral challenges, leverage the natural environment of
+              each individual’s home and community to aid in generalizing acquired skills into everyday routines,
+              collaborate effectively with families, and minimize barriers and inconvenience they may face.</p>
+            <h4>Key Program Elements</h4>
+            <ul>
+              <li>Individualized goals informed by assessment</li>
+              <li>Natural environment teaching and generalization</li>
+              <li>Caregiver training and collaboration</li>
+              <li>Ongoing data collection and plan refinement</li>
+            </ul>
           </div>
-          <div class="vs-text post-content">
-            <p class="text-muted"><small>Published Aug 2025 • 7–9 min read</small></p>
-            <p>This guide gathers therapy tools, evidence-based strategies, and home practice ideas to support learners
-              at every stage of communication. Use it to streamline planning and align teams around functional goals.
-            </p>
-
-            <h5>Assessment & Goal Setting</h5>
-            <ul>
-              <li>Collect caregiver priorities and strength-based histories.</li>
-              <li>Use dynamic assessment and observation across routines.</li>
-              <li>Write measurable, functional goals that matter in daily life.</li>
-            </ul>
-
-            <h5>Helpful Tools & Activities</h5>
-            <ul>
-              <li><strong>Low-tech AAC:</strong> Core vocabulary boards, single-message buttons, choice boards.</li>
-              <li><strong>Language kits:</strong> Pretend play sets, picture books, open-ended toys for modeling.</li>
-              <li><strong>Articulation:</strong> Minimal pairs, mirror work, tactile cues; mix drills with games.</li>
-              <li><strong>Visual supports:</strong> Schedules, first–then boards, token systems for motivation.</li>
-              <li><strong>Home practice:</strong> Short “practice in the routine” cards for mealtime, bath, play.</li>
-            </ul>
-
-            <h5>Collaboration That Works</h5>
-            <p>Progress accelerates when caregivers and educators use the same strategies. Share quick tip sheets, model
-              strategies during sessions, and celebrate small wins to maintain momentum.</p>
-
-            <h5>Data & Progress Monitoring</h5>
-            <ul>
-              <li>Track a few key measures weekly (e.g., spontaneous requests, MLU, accuracy by sound).</li>
-              <li>Use simple visuals to share progress with families and set next-step targets together.</li>
-            </ul>
-
-            <h5>Conclusion</h5>
-            <p>Effective therapy blends play, visuals, and caregiver coaching with clear, functional goals. The right
-              tools help communication skills grow where it matters most—at home, school, and in the community. For
-              customized recommendations and therapy support, <a href="../contact.html">contact Aspire Spectrum</a>.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="vs-feature bg-color1 mb-20">
+            <div class="vs-feature__content">
+              <h4 class="vs-feature__title">Get Started</h4>
+              <p class="vs-feature__text">Contact us to discuss eligibility and scheduling.</p><a href="../contact.html"
+                class="vs-btn w-100"><span class="vs-btn__border"></span>Contact Us</a>
+            </div>
+          </div>
+          <div class="vs-feature bg-color3">
+            <div class="vs-feature__content">
+              <h5 class="vs-feature__title">Have questions?</h5>
+              <p class="vs-feature__text">Email <a href="mailto:info@aspirespectrum.ca">info@aspirespectrum.ca</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <div class="vs-footer bg-title">
     <div class="vs-footer__top z-index-common space-extra-top space-extra-bottom">
       <img src="../assets/img/footer/footer-element-1.png" alt="Footer Element"
@@ -434,21 +441,21 @@
     </div>
   </div>
 
-  <!-- Back To Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to Top">
-    <span class="progress-circle">
-      <svg viewBox="0 0 100 100">
-        <circle class="bg" cx="50" cy="50" r="40"></circle>
-        <circle class="progress" cx="50" cy="50" r="40"></circle>
-      </svg>
-      <span class="progress-percentage" id="progressPercentage">0%</span>
-    </span>
-  </button>
-
+  <!-- Scripts -->
   <script src="../assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/wow.min.js"></script>
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/gsap-scroll-to-plugin.js"></script>
+  <script src="../assets/js/SplitText.js"></script>
+  <script src="../assets/js/lenis.min.js"></script>
+  <script src="../assets/js/swiper-bundle.js"></script>
   <script src="../assets/js/main.js"></script>
-  <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

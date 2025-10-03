@@ -60,6 +60,58 @@
     .vs-header__logo>a>.logo {
       height: 110px;
     }
+    
+    /* Section Headings */
+    .vs-title__main {
+      color: #7FC780;
+      margin-bottom: 30px;
+    }
+    
+    .vs-title__sub {
+      color: #7FC780;
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    /* Card Styling */
+    .vs-blog--style2 {
+      height: 100%;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .vs-blog--style2:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    
+    .vs-blog__content {
+      padding: 25px;
+    }
+    
+    .vs-blog__title a {
+      color: #1a1a1a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .vs-blog__title a:hover {
+      color: #7FC780;
+    }
+    
+    .vs-blog__meta {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .vs-blog__text {
+      margin-bottom: 20px;
+      color: #555;
+    }
 
     /* Responsive fixes for Open Positions cards */
     @media (max-width: 767.98px) {
@@ -354,20 +406,17 @@
   </header>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb-wrapper z-index-common overflow-hidden">
-    <div class="breadcrumb-wrapper__bg wow animate__fadeInUp" data-wow-delay="0.15s" data-vs-gsap-parallax-speed="2"
-      data-vs-gsap-parallax-zoom>
-      <img src="assets/img/custom/pexels-vlada-karpovich-7356477.jpg" alt="Careers at Aspire Spectrum" />
-    </div>
-    <div class="container">
+  <div class="breadcrumb-wrapper z-index-common overflow-hidden" style="background-image: url('assets/img/custom/header-images/careers-header-image.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="breadcrumb-wrapper__overlay" style="background: rgba(127, 199, 128, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+    <div class="container" style="position: relative; z-index: 3;">
       <div class="breadcrumb-wrapper__content wow animate__fadeInUp" data-wow-delay="0.45s">
-        <h1 class="breadcrumb-wrapper__title">Careers</h1>
+        <h1 class="breadcrumb-wrapper__title" style="color: #ffffff;">Careers</h1>
         <div class="breadcrumb-wrapper__menu--wrap">
           <ul class="breadcrumb-wrapper__menu">
             <li class="breadcrumb-wrapper__menu--item">
-              <a href="index.html">Home</a>
+              <a href="index.html" style="color: #ffffff;">Home</a>
             </li>
-            <li class="breadcrumb-wrapper__menu--item">Careers</li>
+            <li class="breadcrumb-wrapper__menu--item" style="color: rgba(255, 255, 255, 0.8);">Careers</li>
           </ul>
         </div>
       </div>
@@ -377,7 +426,7 @@
   <!-- Breadcrumb End -->
 
   <!-- Careers Page -->
-  <section class="space z-index-common overflow-hidden">
+  <section class="space z-index-common overflow-hidden" style="padding: 80px 0;">
     <div class="container">
       <!-- Join Our Team (Image Left) -->
       <div class="row align-items-center gy-4 mb-60">
@@ -465,7 +514,7 @@
     </div>
   </section>
   <!-- Current Openings -->
-  <section class="bg-color1 space">
+  <section class="bg-color1 space" style="padding: 100px 0;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
@@ -543,7 +592,7 @@
     </div>
   </section>
   <!-- Contact Information -->
-  <div class="row mt-60" style="margin-top: 30px;">
+  <div class="row" style="margin: 100px 0;">
     <div class="col-12">
       <div class="vs-title text-center title-anime animation-style2 mb-40">
         <div class="title-anime__wrap">

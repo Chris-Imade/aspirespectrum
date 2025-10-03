@@ -357,21 +357,17 @@
         Header layout 2
     ==============================-->
   <!-- Breadcrumb -->
-  <div class="breadcrumb-wrapper z-index-common overflow-hidden">
+  <div class="breadcrumb-wrapper z-index-common overflow-hidden" style="background-color: #7FC780;">
     <div class="vs-balls vs-balls--screen" data-balls-bottom="-6px" data-balls-color="#ffffff"></div>
-    <div class="breadcrumb-wrapper__bg wow animate__fadeInUp" data-wow-delay="0.15s" data-vs-gsap-parallax-speed="2"
-      data-vs-gsap-parallax-zoom>
-      <img src="assets/img/bg/breadcrumb-bg-3.jpg" alt="session bg" />
-    </div>
     <div class="container">
       <div class="breadcrumb-wrapper__content wow animate__fadeInUp" data-wow-delay="0.45s">
-        <h1 class="breadcrumb-wrapper__title">Contact Us</h1>
+        <h1 class="breadcrumb-wrapper__title" style="color: #ffffff;">Contact Us</h1>
         <div class="breadcrumb-wrapper__menu--wrap">
           <ul class="breadcrumb-wrapper__menu">
             <li class="breadcrumb-wrapper__menu--item">
-              <a href="index.html">Home</a>
+              <a href="index.html" style="color: #ffffff;">Home</a>
             </li>
-            <li class="breadcrumb-wrapper__menu--item">Contact us</li>
+            <li class="breadcrumb-wrapper__menu--item" style="color: rgba(255, 255, 255, 0.8);">Contact us</li>
           </ul>
         </div>
       </div>
@@ -535,7 +531,25 @@
               </div>
             </div>
           </div>
-
+          <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
+            <div class="vs-footer__widget">
+              <h3 class="vs-footer__title">Subscribe to our newsletter</h3>
+              <p class="mb-15">Get helpful resources, tips, and updates from Aspire Spectrum.</p>
+              <form class="footer-newsletter"
+                onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                <label for="footer-email-contact" class="visually-hidden">Email address</label>
+                <div class="input-group">
+                  <input id="footer-email-contact" type="email" class="form-control" placeholder="Your email"
+                    required />
+                  <button type="submit" class="vs-btn" aria-label="Subscribe to newsletter">
+                    <span class="vs-btn__border"></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+                <small class="d-block mt-2 opacity-75">We respect your privacy. Unsubscribe anytime.</small>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
