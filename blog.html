@@ -65,6 +65,7 @@
     /* Blog cards */
     .blog-grid .vs-blog {
       height: 100%;
+      max-height: 450px;
       display: flex;
       flex-direction: column;
       background: #fff;
@@ -88,13 +89,11 @@
     .blog-grid .vs-blog__img {
       position: relative;
       overflow: hidden;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
+      height: 200px;
+      flex-shrink: 0;
     }
 
     .blog-grid .vs-blog__img img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -106,61 +105,84 @@
     }
 
     .blog-grid .vs-blog__content {
-      padding: 24px;
+      padding: 15px;
       flex: 1;
       display: flex;
       flex-direction: column;
+      gap: 10px;
     }
 
-    .blog-grid .vs-blog__title {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
+    .blog-grid .vs-blog__title,
+    .blog-grid .vs-blog__heading {
+      font-size: 17px;
+      margin: 0;
       line-height: 1.4;
     }
 
-    .blog-grid .vs-blog__title a {
+    .blog-grid .vs-blog__title a,
+    .blog-grid .vs-blog__heading--link {
       color: #1a1a1a;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    .blog-grid .vs-blog__title a:hover {
+    .blog-grid .vs-blog__title a:hover,
+    .blog-grid .vs-blog__heading--link:hover {
       color: #7FC780;
     }
 
     .blog-grid .vs-blog__meta {
-      margin-bottom: 12px;
+      margin: 0;
       font-size: 0.875rem;
       color: #666;
     }
 
     .blog-grid .vs-blog__desc {
-      margin-bottom: 20px;
+      margin: 0;
       color: #555;
       flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.4;
+    }
+
+    .blog-grid .vs-blog__bottom {
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .blog-grid .vs-blog__link {
-      margin-top: auto;
       display: inline-flex;
       align-items: center;
-      color: #7FC780;
+      color: #7FC780 !important;
       font-weight: 600;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .blog-grid .vs-blog__link:hover {
-      color: #5a9e5c;
+      color: #5a9e5c !important;
     }
 
     .blog-grid .vs-blog__link i {
+      color: #7FC780 !important;
       margin-left: 6px;
       transition: transform 0.3s ease;
     }
 
     .blog-grid .vs-blog__link:hover i {
+      color: #5a9e5c !important;
       transform: translateX(4px);
+    }
+
+    /* Hide share icons in blog cards */
+    .blog-grid .vs-blog__share {
+      display: none;
     }
   </style>
 </head>
@@ -449,7 +471,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/why-do-some-kids-need-speech-therapy.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
                       <div class="vs-blog__share">
                         <ul>
@@ -498,7 +520,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/toys-for-children-with-sensory-processing.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
                       <div class="vs-blog__share">
                         <ul>
@@ -546,7 +568,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/picture-books-therapists-can-use-to-promote.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
                       <div class="vs-blog__share">
                         <ul>
@@ -595,7 +617,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/down-syndrome-education-tips-from-therapy.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
                       <div class="vs-blog__share">
                         <ul>
@@ -644,7 +666,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/resource-guide-for-speech-therapists.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
                       <div class="vs-blog__share">
                         <ul>
@@ -693,7 +715,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/local-earth-day-activities-for-children.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
                       <div class="vs-blog__share">
                         <ul>

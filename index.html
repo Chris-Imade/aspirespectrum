@@ -372,6 +372,91 @@
         flex-basis: auto;
       }
     }
+
+    /* Blog cards improvements */
+    .vs-blog {
+      max-height: 450px !important;
+    }
+
+    .vs-blog__inner {
+      height: 100% !important;
+      max-height: 450px !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vs-blog__img {
+      height: 200px !important;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .vs-blog__img img {
+      height: 100% !important;
+      max-height: 200px !important;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .vs-blog__content {
+      padding: 15px !important;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .vs-blog__heading {
+      font-size: 17px !important;
+      margin: 0 !important;
+      line-height: 1.4;
+    }
+
+    .vs-blog__meta {
+      margin: 0 !important;
+      font-size: 0.875rem;
+    }
+
+    .vs-blog__desc {
+      margin: 0 !important;
+      flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.4;
+    }
+
+    .vs-blog__bottom {
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Hide share icons in blog cards */
+    .vs-blog__share {
+      display: none !important;
+    }
+
+    /* Ensure consistent color for read more button and arrow */
+    .vs-blog__link {
+      color: #7FC780 !important;
+    }
+
+    .vs-blog__link i {
+      color: #7FC780 !important;
+      margin-left: 6px;
+    }
+
+    .vs-blog__link:hover {
+      color: #5a9e5c !important;
+    }
+
+    .vs-blog__link:hover i {
+      color: #5a9e5c !important;
+    }
   </style>
 </head>
 
@@ -1428,7 +1513,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/why-do-some-kids-need-speech-therapy.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
 
                       <div class="vs-blog__share">
@@ -1493,7 +1578,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/toys-for-children-with-sensory-processing.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
 
                       <div class="vs-blog__share">
@@ -1558,7 +1643,7 @@
                     </p>
                     <div class="vs-blog__bottom">
                       <a href="posts/picture-books-therapists-can-use-to-promote.html" class="vs-blog__link">
-                        Read more<i class="fa-solid fa-arrow-right"></i>
+                        Read more <i class="fa-solid fa-arrow-right"></i>
                       </a>
 
                       <div class="vs-blog__share">

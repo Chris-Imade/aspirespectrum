@@ -60,6 +60,98 @@
     .vs-header__logo>a>.logo {
       height: 110px;
     }
+
+    /* Share buttons styles */
+    .post-share-section {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 2rem;
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      background: #fff;
+      color: #374151;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      white-space: nowrap;
+    }
+
+    .share-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+
+    .share-btn--facebook {
+      border-left: 3px solid #1877f2;
+    }
+
+    .share-btn--facebook:hover {
+      background: #1877f2;
+      color: white;
+    }
+
+    .share-btn--twitter {
+      border-left: 3px solid #1da1f2;
+    }
+
+    .share-btn--twitter:hover {
+      background: #1da1f2;
+      color: white;
+    }
+
+    .share-btn--linkedin {
+      border-left: 3px solid #0077b5;
+    }
+
+    .share-btn--linkedin:hover {
+      background: #0077b5;
+      color: white;
+    }
+
+    .share-btn--copy {
+      border-left: 3px solid #7FC780;
+    }
+
+    .share-btn--copy:hover {
+      background: #7FC780;
+      color: white;
+    }
+
+    .share-btn i {
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .share-buttons {
+        justify-content: center;
+      }
+
+      .post-share-section .row {
+        text-align: center;
+      }
+
+      .post-share-section h5 {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -369,6 +461,46 @@
 
             <p>Choosing the right sensory tools requires careful observation and often, the guidance of an occupational therapist. If you have questions about your child's sensory needs, we encourage you to <a href="../contact.html">contact Aspire Spectrum</a> for a consultation.</p>
           </div>
+          
+          <!-- Share Section -->
+          <div class="post-share-section mt-5 pt-4" style="border-top: 1px solid #e5e7eb;">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h5 class="mb-3 mb-md-0" style="color: #374151; font-weight: 600;">Share this article</h5>
+              </div>
+              <div class="col-md-6">
+                <div class="share-buttons d-flex gap-1 justify-content-md-end flex-wrap">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.aspirespectrum.com/posts/toys-for-children-with-sensory-processing.html" 
+                     target="_blank" 
+                     class="share-btn share-btn--facebook"
+                     aria-label="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?url=https://www.aspirespectrum.com/posts/toys-for-children-with-sensory-processing.html&text=Toys%20for%20Children%20with%20Sensory%20Processing" 
+                     target="_blank" 
+                     class="share-btn share-btn--twitter"
+                     aria-label="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                  </a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.aspirespectrum.com/posts/toys-for-children-with-sensory-processing.html" 
+                     target="_blank" 
+                     class="share-btn share-btn--linkedin"
+                     aria-label="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                  <button onclick="copyToClipboard()" 
+                          class="share-btn share-btn--copy"
+                          aria-label="Copy link">
+                    <i class="fas fa-link"></i>
+                    <span>Copy Link</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -494,6 +626,39 @@
   <script src="../assets/js/main.js"></script>
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Copy link functionality
+    function copyToClipboard() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(function() {
+        const button = event.target.closest('.share-btn--copy');
+        const originalText = button.querySelector('span').textContent;
+        button.querySelector('span').textContent = 'Copied!';
+        button.style.background = '#10b981';
+        button.style.color = 'white';
+        
+        setTimeout(() => {
+          button.querySelector('span').textContent = originalText;
+          button.style.background = '';
+          button.style.color = '';
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        const textArea = document.createElement('textarea');
+        textArea.value = url;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        const button = event.target.closest('.share-btn--copy');
+        const originalText = button.querySelector('span').textContent;
+        button.querySelector('span').textContent = 'Copied!';
+        setTimeout(() => {
+          button.querySelector('span').textContent = originalText;
+        }, 2000);
+      });
+    }
   </script>
 </body>
 
