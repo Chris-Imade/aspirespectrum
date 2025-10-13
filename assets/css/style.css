@@ -6481,27 +6481,8 @@ blockquote.vs-quote .quote-author {
 }
 .blog-style3 .blog-img img {
   transform: scale(1);
-  transition: all ease 0.4s;
-}
-.blog-style3 .blog-body {
-  border: 2px solid #f4f5f8;
-}
-.blog-style3:nth-child(odd) .blog-body {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.blog-style3 .blog-content {
-  padding: 35px 40px 30px 40px;
-}
-.blog-style3 .blog-meta {
-  margin-bottom: 15px;
-}
-.blog-style3 .blog-meta i {
-  color: var(--vs-body-color);
 }
 .blog-style3 .blog-meta a {
-  position: relative;
-  line-height: 1;
   border-right: 1px solid #c8c8c8;
   margin-right: 12px;
   padding: 0 15px 0 0;
@@ -7993,7 +7974,7 @@ blockquote.vs-quote .quote-author {
   margin: 0 0 22px 0;
 }
 .vs-service__heading {
-  font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+  font-size: 1.5rem;
   margin-bottom: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -8005,7 +7986,7 @@ blockquote.vs-quote .quote-author {
   display: inline-block;
 }
 .vs-service__link {
-  --icon-size: 53px;
+  --icon-size: 33px;
   width: var(--icon-size);
   min-width: var(--icon-size);
   min-height: var(--icon-size);
@@ -8022,7 +8003,7 @@ blockquote.vs-quote .quote-author {
   color: var(--vs-title-color);
 }
 .vs-service__link svg {
-  transform: translateX(-9px) translateY(9px);
+  transform: translateX(-5px) translateY(5px);
   transition: all 0.3s ease-in-out;
   transform-origin: center center;
 }
@@ -14487,4 +14468,17 @@ body.color-mode {
 
 .logo {
   height: 80px;
+}
+
+/* Service detail page contact button spacing */
+.contact-btn-assessment,
+.contact-btn-autism-behavioral,
+.contact-btn-early-intervention,
+.contact-btn-daily-living,
+.contact-btn-social-skills,
+.contact-btn-functional-communication,
+.contact-btn-expressive-receptive,
+.contact-btn-verbal-communication,
+.contact-btn-evidence-based {
+  margin-top: 24px !important;
 }
